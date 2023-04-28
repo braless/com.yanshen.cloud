@@ -1,0 +1,131 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+      base-path: /actuator
+    enabled: 'true'
+  health:
+    redis:
+      enabled: 'false'
+vehicle:
+  trajectory:
+    limitNum: '3'
+    maxNum: '10000'
+jasypt:
+  encryptor:
+    password: Bt%XJ^n1j8mz
+spring:
+  redis:
+    cluster:
+      nodes: prod.redis1.lyzh.com:7001,prod.redis1.lyzh.com:7002,prod.redis1.lyzh.com:7003,prod.redis2.lyzh.com:7004,prod.redis3.lyzh.com:7005,prod.redis4.lyzh.com:7006
+      nodes-for-jetCache: redis.cluster1.lyzh.com:7001,redis.cluster1.lyzh.com:7002,redis.cluster1.lyzh.com:7003,redis.cluster2.lyzh.com:7004,redis.cluster2.lyzh.com:7005,redis.cluster2.lyzh.com:7006
+    jedis:
+      pool:
+        max-active: '100'
+        max-idle: '50'
+        max-wait: '1000'
+        min-idle: '5'
+    password: ENC(rcxTWan8/++gmENakO35/ZBKmmzk7+yb)
+  datasource:
+    dynamic:
+      primary: datahub #设置默认的数据源或者数据源组,默认值即为datahub
+      datasource:
+        datahub:
+          url: jdbc:mysql://192.168.10.10:3306/test?useAffectedRows=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false&allowMultiQueries=true&allowPublicKeyRetrieval=true&serverTimezone=GMT%2B8
+          username: root
+          password: Toy@10.2021-admin
+          driver-class-name: com.mysql.cj.jdbc.Driver
+        saas:
+          url: jdbc:mysql://192.168.10.10:3306/test?useAffectedRows=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false&allowMultiQueries=true&allowPublicKeyRetrieval=true&serverTimezone=GMT%2B8
+          username: root
+          password: Toy@10.2021-admin
+          driver-class-name: com.mysql.cj.jdbc.Driver
+        slave:
+          url: jdbc:mysql://192.168.10.10:3306/dev_yuecheng?useAffectedRows=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false&allowMultiQueries=true&allowPublicKeyRetrieval=true&serverTimezone=GMT%2B8
+          username: root
+          password: Toy@10.2021-admin
+          driver-class-name: com.mysql.cj.jdbc.Driver
+  data:
+    mongodb:
+      tenantgroup:
+        uri: mongodb://192.168.10.228:27016/test_tenantgroup
+      second:
+        secondSourceList: 2,5,8,11
+        uri: mongodb://192.168.10.228:27016/test_source
+      tenantscoreaccount:
+        uri: mongodb://192.168.10.228:27016/test_tenantscoreaccount
+      third:
+        thirdSourceList: 3,6,9,12
+        uri: mongodb://192.168.10.228:27016/test_source
+      first:
+        firstSourceList: 1,4,7,10
+        uri: mongodb://192.168.10.228:27016/test_source
+      gps:
+        uri: mongodb://192.168.10.228:27016/gps_data
+      inspectrecord:
+        uri: mongodb://192.168.10.228:27016/test_inspectrecord
+      shardCluster:
+        uri: mongodb://192.168.10.228:27016/test
+      primary:
+        uri: mongodb://192.168.10.228:27016/test
+  application:
+    name: com-lyzh-datahub-openapi
+  cloud:
+    config:
+      uri: http://192.168.10.229:3101
+  zipkin:
+    baseUrl: http://192.168.10.240:9411
+com:
+  alipay:
+    sofa:
+      rpc:
+        bolt:
+          port: '12200'
+        rest:
+          port: '8342'
+          context:
+            path: /openapi
+        registry:
+          address: local://F://tmp/sofa-local-reg/localRegistry.reg
+      tracer:
+        tracerGlobalRollingPolicy: .yyyy-MM-dd
+        statLogInterval: '60'
+        baggageMaxLength: '1024'
+        disableDigestLog: 'false'
+        tracerGlobalLogReserveDay: '7'
+        jsonOutput: 'true'
+eureka:
+  instance:
+    ip-address: 127.0.0.1
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:3100/eureka
+  ignore:
+    order: c18e14b1-41f2-4006-93f9-b9df9262d710
+  file:
+    ossId: 23der75fe34rew5re58267209354e44
+    ossUrl: http://idc.third.lyzhyun.com:84
+server:
+  port: '6678'
+mybatis-plus:
+  mapper-locations: classpath:mappers/*.xml
+  config-location: classpath:mybatis-config.xml
+logging:
+  path: ./logs
+jetcache:
+  areaInCacheName: 'false'
+  local:
+    default:
+      expireAfterAccessInMillis: '10000'
+      expireAfterWriteInMillis: '2000'
+      keyConvertor: fastjson
+      limit: '100000'
+      type: caffeine
+  remote:
+    default:
+      keyConvertor: fastjson
+      type: redis.springdata
+      valueEncoder: java
+  statIntervalMinutes: '1'
+

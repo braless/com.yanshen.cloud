@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+
+  <groupId>com.yanshen</groupId>
+  <artifactId>com.yanshen.cloud</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>com.yanshen.cloud</name>
+  <url>http://maven.apache.org</url>
+  <modules>
+    <module>com.yanshen.gateway</module>
+    <module>com.yanshen.zuul</module>
+    <module>com.yanshen.openapi</module>
+    <module>com.yanshen.config</module>
+    <module>com.yanshen.eureka</module>
+      <module>com.yanshen.tool</module>
+  </modules>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <spring-cloud.version>Hoxton.SR9</spring-cloud.version>
+      <spring-cloud-alibaba.version>2.2.5.RELEASE</spring-cloud-alibaba.version>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <maven.compiler.source>1.8</maven.compiler.source>
+      <maven.compiler.target>1.8</maven.compiler.target>
+      <java.version>1.8</java.version>
+      <sofa.boot.version>3.6.0</sofa.boot.version>
+      <fastjson2.version>2.0.8</fastjson2.version>
+  </properties>
+  <!-- 依赖声明 -->
+  <dependencyManagement>
+    <dependencies>
+      <!-- spring-cloud-->
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>${spring-cloud.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>2.3.5.RELEASE</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <!-- spring-cloud-alibaba -->
+      <dependency>
+        <groupId>com.alibaba.cloud</groupId>
+        <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+        <version>${spring-cloud-alibaba.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+</project>

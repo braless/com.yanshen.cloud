@@ -1,0 +1,87 @@
+server:
+  port: 3102
+spring:
+  application:
+    name: com.yanshen.server
+  devtools:
+    add-properties: false
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${DISCOVERY_SERVERADDR:120.46.171.189}:${DISCOVER_PORT:8848}
+        namespace: ${DISCOVERY_NAMESPACE:7b488f71-2b60-4131-813a-707f4559d3e2}
+      config:
+        server-addr: ${CONFIG_SERVERADDR:120.46.171.189}:${CONFIG_PORT:8848}
+        namespace: ${CONFIG_NAMESPACE:7b488f71-2b60-4131-813a-707f4559d3e2}
+        group: ${CONFIG_GROUP:DEFAULT_GROUP}
+        file-extension: yml
+        refresh-enabled: true
+#        shared-configs:
+#          - dataId: application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+#            group: JAVA_COMMON_GROUP
+#        extension-configs:
+#          - dataId: xrw-base-redis.yml
+#            group: JAVA_BASE_GROUP
+#          - dataId: xrw-cloud-sentinel-gateway.yaml
+#            group: JAVA_COMMON_GROUP
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#server:
+#  port: 3003
+##eureka:
+##  client:
+##    service-url:
+##      defaultZone: http://127.0.0.1:3100/eureka
+##spring:
+##  application:
+##    name: com-yanshen-server
+#
+#
+#
+#
+##nacos配置  2022-05-01
+#nacos:
+#  namespace: nacos-dev
+#spring:
+#  application:
+#    name: com.yanshen.server2
+#  cloud:
+#    nacos:
+#      config:
+#        namespace: ${nacos.namespace}
+#        #服务地址
+#        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+#        file-extension: yml
+#        shared-configs[0]:
+#          data-id: server.yml
+#          refresh: true
+#          group: joe
+#      discovery:
+#        # ?服务地址
+#        server-addr: 192.168.0.47:8848
+#        namespace: ${nacos.namespace}
+#

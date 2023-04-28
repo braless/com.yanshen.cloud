@@ -1,0 +1,106 @@
+thymeleaf:
+  prefix: classpath:/templates/**
+  suffix: .*
+  encoding: UTF-8
+  content-type: text/html
+  mode: HTML5
+  cache: false
+kafka:
+  topic:
+    kafeidou_1: kafeidou_1
+    kafeidou_2: kafeidou_2
+spring:
+  redis:
+    database: 0
+    host: 192.168.0.47
+    port: 6379
+    jedis:
+      pool:
+        max-active: 100
+        max-idle: 10
+        max-wait: 100000
+    timeout: 5000
+    password: 123456@qwer
+  kafka:
+    bootstrap-servers: 120.46.171.189:9092
+    producer:
+      acks: 1
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer  #指定消息key和消息体的编解码方式
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer  #指定消息key和消息体的编解码方式   org.springframework.kafka.support.serializer.JsonSerializer #
+        #     配置生产者的 Json 序列化的可信赖包
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: "com.alibaba.fastjson,com.yanshen.dev.module"
+    consumer:
+      max-poll-records: 500
+      enable-auto-commit: false
+      group-id: kafeidou
+      auto-offset-reset: latest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer   #org.springframework.kafka.support.serializer.JsonDeserializer #
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      #     配置生产者的 Json 序列化的可信赖包
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: "com.alibaba.fastjson,com.yanshen.dev.module"
+  application:
+    name: boot
+  main:
+    allow-circular-references: true
+  datasource:
+    name: springboot
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.0.47:3306/weibo?useUnicode=true&characterEncoding=utf-8&userSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: 6d34761495ec289e
+    # ʹ��druid����Դ
+    type: com.alibaba.druid.pool.DruidDataSource
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+mybatis:
+  mapper-locations: classpath*:mybatis/*.xml
+canal:
+  ip: 192.168.0.47
+  host: 192.168.0.47
+  server: 192.168.0.47:11111
+  port: 11111
+  destination: example
+  username: weibo
+  password: 123456
+tables: weibo
+log:
+  info:
+    to: console
+
+rocketmq:
+  name-server: 120.46.171.189:9876
+  producer:
+    #生产者组名，规定在一个应用里面必须时唯一的。
+    group: sync-group
+    send-message-timeout: 300000
+    topic: sync-topic
+  #消息达到4096字节的时候，消息就会被压缩。默认就是4096，有利于网络传输，提升性能。
+    compress-message-body-threshold: 4096
+  #最大的消息限制 默认为128K
+    max-message-size: 4194304
+  #同步消息发送失败重试次数
+    retry-times-when-send-failed: 3
+  #在内部发送失败时是否重试其他代理。 源码：setRetryAnotherBrokerWhenNotStoreOK，就是指：发送到broker-a失败是否发送到broker-b。这个参数在有多个broker才生效。
+    retry-next-server: true
+  #异步消息发送失败重试的次数
+    retry-times-when-send-async-failed: 3
+  md5key: abc

@@ -1,0 +1,16 @@
+server:
+  port: 3104
+spring:
+  application:
+    name: com.yanshen.order
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 120.46.171.189:8848
+        namespace: 7b488f71-2b60-4131-813a-707f4559d3e2
+      config:
+        server-addr: 120.46.171.189:8848
+        namespace: 7b488f71-2b60-4131-813a-707f4559d3e2
+        group: DEFAULT_GROUP
+        file-extension: yml
+        refresh-enabled: true

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yanshen.weibo.mapper.WeiBoMapper">
+
+    <select id="find" resultType="com.yanshen.weibo.entity.Weibo">
+        select *,CONCAT('http://weibo.com/u/',uid)as url from weibo_tel where
+        <if test="tel!=null">
+            tel = #{tel}
+        </if>
+        <if test="uid!=null">
+            uid =#{uid}
+        </if>
+    </select>
+    <insert id="insert">
+        insert into weibo_info  (tel,url,uid,ip,ipaddress,area,createtime) values (#{tel},#{url},#{uid},#{ip},#{ipaddress},#{area},now())
+    </insert>
+
+    <select id="query" resultType="com.yanshen.weibo.entity.TenentQQ">
+        select * from qq_tel where qq =#{qq}
+    </select>
+</mapper>

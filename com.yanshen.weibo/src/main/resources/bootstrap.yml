@@ -1,0 +1,32 @@
+#spring:
+#  application:
+#    name: com-yanshen-weibo
+#  cloud:
+#    config:
+#      uri: http://127.0.0.1:3101
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://127.0.0.1:3100/eureka
+
+#nacos 配置  2022-05-01
+nacos:
+  namespace: nacos-dev
+spring:
+  application:
+    name: com-yanshen-weibo
+  cloud:
+    nacos:
+      config:
+        namespace: ${nacos.namespace}
+        #服务地址
+        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+        file-extension: yml
+        shared-configs[0]:
+          data-id: ${spring.application.name}.yml
+          refresh: true
+          group: cyc
+      discovery:
+        # ?服务地址
+        server-addr: 192.168.0.47:8848
+        namespace: ${nacos.namespace}

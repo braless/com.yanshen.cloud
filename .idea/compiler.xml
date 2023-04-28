@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="com.yanshen.tieba" />
+        <module name="com.yanshen.config" />
+        <module name="canal-spring-boot-starter" />
+        <module name="com.yanshen.openapi" />
+        <module name="com.yanshen.dev" />
+        <module name="com.yanshen.eureka" />
+        <module name="canal-spring-boot-autoconfigure" />
+        <module name="com.yanshen.author" />
+        <module name="com.yanshen.gateway" />
+        <module name="com.yanshen.orderService" />
+        <module name="com.yanshen.weibo" />
+        <module name="com.yanshen.server2" />
+        <module name="com.yanshen.generator" />
+        <module name="canal-example" />
+        <module name="com.yanshen.common" />
+        <module name="com.yanshen.javabase" />
+        <module name="com.yanshen.tool" />
+        <module name="canal-client" />
+        <module name="com.yanshen.server1" />
+        <module name="com.yanshen.zuul" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="com-yanshen-parent" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

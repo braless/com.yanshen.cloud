@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/com.yanshen.orderService/pom.xml" />
+        <option value="$PROJECT_DIR$/com.yanshen.common/pom.xml" />
+        <option value="$PROJECT_DIR$/com.yanshen.dev/pom.xml" />
+        <option value="$PROJECT_DIR$/canal-client/pom.xml" />
+        <option value="$PROJECT_DIR$/com.yanshen.javaBase/pom.xml" />
+        <option value="$PROJECT_DIR$/com.yanshen.weibo/pom.xml" />
+        <option value="$PROJECT_DIR$/com.yanshen.tieba/pom.xml" />
+        <option value="$PROJECT_DIR$/com.yanshen.server2/pom.xml" />
+        <option value="$PROJECT_DIR$/com.yanshen.server1/pom.xml" />
+        <option value="$PROJECT_DIR$/com.yanshen.generator/pom.xml" />
+        <option value="$PROJECT_DIR$/com.yanshen.author/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>

@@ -1,0 +1,18 @@
+server:
+  port: 3101
+spring:
+  cloud:
+    config:
+      uri: http://127.0.0.1:3101
+  application:
+    exclude:
+    name: com.yanshen.openapi
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:3100/eureka
+log:
+  info:
+    to: console
+#logging:
+#  config: classpath:logback-spring.xml

@@ -1,0 +1,32 @@
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:10085/eureka
+  instance:
+    ip-address: 127.0.0.1
+server:
+  port: 1000
+
+spring:
+  datasource:
+    name: test
+    url: jdbc:mysql://34.80.199.46:3306/jd?useUnicode=true&autoReconnect=true&allowMultiQueries=true&useSSL=false  # 34.80.199.46   127.0.0.1
+    #url: jdbc:mysql://127.0.0.1:3306/jd?useUnicode=true&autoReconnect=true&allowMultiQueries=true&useSSL=false  # 34.80.199.46   127.0.0.1
+    username: jdbean
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+  profiles:
+    active: dev
+  application:
+    name: com.yasnhen.tool
+
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+mybatis-plus:
+  mapper-locations: classpath:/mybatis/mapper/*.xml,/mybatis/mybatis/*.xml
+  typeAliasesPackage: com.yanshen.jdbean.utils
+  config-location: classpath:/mybatis/mybatis-config.xml
+  global-config:
+    sql-parser-cache: true
+    refresh: true
