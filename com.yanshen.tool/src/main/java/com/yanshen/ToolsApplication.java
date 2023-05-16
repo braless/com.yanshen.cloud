@@ -1,6 +1,7 @@
 package com.yanshen;
 
 import com.yanshen.exception.ExceptionFilter;
+import lombok.extern.slf4j.Slf4j;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -21,6 +22,7 @@ import javax.annotation.PreDestroy;
 @MapperScan("com.yanshen.mapper")
 @SpringBootApplication
 @EnableEurekaClient
+@Slf4j
 public class ToolsApplication implements ApplicationRunner {
     /**
      * 自定义filter
@@ -43,18 +45,18 @@ public class ToolsApplication implements ApplicationRunner {
         String url = "https://api.day.app/4ppVFBUZxhEnxPzumvtsdF/服务状态/Bean服务已启动";
         UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(url);
         response = restTemplate.exchange(builder.build().encode().toUri(), HttpMethod.GET, new HttpEntity<String>(new HttpHeaders()), String.class);
-        System.out.println(response);
+        log.info("启动响应:{}",response);
     }
 
 
     @PreDestroy
     public void destory() {
-        System.out.println("在程序启动时执行");
+       log.info("在程序关闭时执行");
     }
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        System.out.println("在程序关闭时执行");
+        log.info("在程序启动时执行");
         pushBark();
     }
 
