@@ -1,0 +1,116 @@
+server:
+  port: 1000
+spring:
+  # Filter配置
+  filter:
+    request:
+      enable: true
+      url-patterns: /*
+      order: 1
+      async: true
+    xss:
+      enable: true
+      url-patterns: /*
+      order: 2
+      async: true
+
+  # 拦截器配置
+  interceptor:
+    permission:
+      enable: false
+      include-paths: /**
+    resource:
+      enable: false
+      include-paths: ${spring-boot-plus.resource-access-patterns}
+    upload:
+      enable: false
+      include-paths: /upload/**
+    download:
+      enable: false
+      include-paths: /download/**
+  ######################## Spring Shiro start ########################
+  shiro:
+    # 是否启用
+    enable: true
+    # shiro ini 多行字符串配置
+    filter-chain-definitions: |
+      /=anon
+      /static/**=anon
+      /templates/**=anon
+      /druid/**=anon
+      /hello/world=anon
+      /sysLog/**=anon
+      /verificationCode/**=anon
+      /resource/**=anon
+      /fooBar/**=anon
+    # 权限配置
+    permission:
+      # 排除登陆登出相关
+      - urls: /api/login,/logout
+        permission: anon
+        # 排除静态资源
+      - urls: /static/**,/templates/**
+        permission: anon
+        # 排除Swagger
+      - urls: /docs,/swagger-ui.html,/webjars/springfox-swagger-ui/**,/swagger-resources/**,/v2/api-docs
+        permission: anon
+        # 排除SpringBootAdmin
+      - urls: /,/favicon.ico,/actuator/**,/instances/**,/assets/**,/sba-settings.js,/applications/**
+        permission: anon
+        # 测试
+      - url: /sysUser/getPageList
+        permission: anon
+  ######################## Spring Shiro end ##########################
+
+  ############################ JWT start #############################
+  jwt:
+    # token请求头名称
+    token-name: token
+    # jwt密钥
+    secret: 666666
+    # 发行人
+    issuer: spring-boot-plus
+    # 观众
+    audience: web
+    # 默认过期时间1小时，单位：秒
+    expire-second: 3600
+    # 是否刷新token
+    refresh-token: true
+    # 刷新token的时间间隔，默认10分钟，单位：秒
+    refresh-token-countdown: 600
+    # redis校验jwt token是否存在,可选
+    redis-check: true
+    # true: 同一个账号只能是最后一次登陆token有效，false：同一个账号可多次登陆
+    single-login: false
+    # 盐值校验，如果不加自定义盐值，则使用secret校验
+    salt-check: true
+  ############################ JWT end ###############################
+
+  ############################### spring-boot-plus end ###############################
+  redis:
+    database: 0
+    host: 192.168.20.99
+    port: 6379
+  datasource:
+    name: test
+    url: jdbc:mysql://192.168.20.99:3307/isp-back?useUnicode=true&autoReconnect=true&allowMultiQueries=true&useSSL=false  # 34.80.199.46   127.0.0.1
+    username: root
+    password: zksk666
+    driver-class-name: com.mysql.jdbc.Driver
+  profiles:
+    active: dev
+  application:
+    name: com.yasnhen.refact
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml,mapper/*.xml
+  typeAliasesPackage: com.yanshen.jdbean.utils
+  config-location: classpath:/mybatis/mybatis-config.xml
+  global-config:
+    sql-parser-cache: true
+    refresh: true
+
+
+
