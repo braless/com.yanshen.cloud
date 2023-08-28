@@ -1,0 +1,16 @@
+server:
+  port: 3102
+spring:
+  application:
+    name: com.yanshen.canal
+
+# canal-client 配置
+canal:
+  ip: 120.46.171.189
+  host: 120.46.171.189
+  server: 120.46.171.189:5019
+  port: 5019
+  destination: example
+  username: weibo
+  password: 123456
+tables: weibo
