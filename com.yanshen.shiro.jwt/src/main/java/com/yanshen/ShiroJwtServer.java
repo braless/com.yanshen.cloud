@@ -1,6 +1,7 @@
 package com.yanshen;
 
 import com.yanshen.common.TokenFilter;
+import com.yanshen.util.IdWorker;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -30,5 +31,9 @@ public class ShiroJwtServer {
         registration.setName("TokenFilter");// 设置优先级
         registration.setOrder(5);// 设置优先级
         return registration;
+    }
+    @Bean
+    public IdWorker getIdWorker() {
+        return new IdWorker(2, 5, 1);
     }
 }

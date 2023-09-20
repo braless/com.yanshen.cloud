@@ -30,7 +30,8 @@ import lombok.Data;
     * 
     */
     @ApiModelProperty(value = "")
-    private Integer id;
+    //@TableId(value = "id", type = IdType.AUTO)
+    private Long id;
 
 
     /**
@@ -67,11 +68,18 @@ import lombok.Data;
     @ApiModelProperty(value = "")
     private String userAvatar;
 
+    /**
+     * 用户状态 0 正常 1 禁用 2 注销
+     */
+    @TableField
+    private int status;
+
 
     /**
     * 
     */
     @ApiModelProperty(value = "")
+    @TableField(fill = FieldFill.INSERT)
     private Date createTime;
 
 

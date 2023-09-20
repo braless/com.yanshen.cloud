@@ -1,6 +1,6 @@
 package com.yanshen.controller;
 
-import com.yanshen.common.Result;
+import com.yanshen.common.R;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class CommonController {
 
     @RequestMapping("/tips")
-    public Result tips(){
-        return Result.fail("用户未登录!");
+    public R tips(){
+        return R.fail("用户未登录!");
     }
 
 }

@@ -26,7 +26,7 @@ mybatis-plus:
       logic-delete-value: 1 # 逻辑已删除值(默认为 1)
       logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
       db-type: mysql
-      id-type: assign_id
+      id-type: auto
   mapper-locations: classpath*:/mapper/**Mapper.xml
   type-aliases-package: com.yanshen.entity
   configuration:

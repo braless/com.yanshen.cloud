@@ -1,7 +1,7 @@
 package com.yanshen.shiro;
 
 import cn.hutool.json.JSONUtil;
-import com.yanshen.common.Result;
+import com.yanshen.common.R;
 import com.yanshen.constants.AuthConstats;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.SecurityUtils;
@@ -94,7 +94,7 @@ public class JwtFilter extends BasicHttpAuthenticationFilter {
         httpServletResponse.setStatus(400);
         httpServletResponse.setContentType("application/json;charset=utf-8");
         PrintWriter out = httpServletResponse.getWriter();
-        out.println(JSONUtil.toJsonStr(Result.fail(errorMsg)));
+        out.println(JSONUtil.toJsonStr(R.fail(errorMsg)));
         out.flush();
         out.close();
         return false;

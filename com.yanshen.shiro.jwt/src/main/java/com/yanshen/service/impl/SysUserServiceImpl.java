@@ -5,7 +5,7 @@ import cn.hutool.core.date.DateUtil;
 import cn.hutool.json.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.yanshen.common.CacheTime;
-import com.yanshen.common.Result;
+import com.yanshen.common.R;
 import com.yanshen.entity.LoginUser;
 import com.yanshen.entity.SysUser;
 import com.yanshen.mapper.UserMapper;
@@ -42,14 +42,14 @@ public class SysUserServiceImpl extends ServiceImpl<UserMapper, SysUser> impleme
     private RedisUtil redisUtil;
 
     @Override
-    public Result login(String username, String password) {
+    public R login(String username, String password) {
         // 先从数据库查询
         SysUser sysUser = this.getOne(new QueryWrapper<SysUser>().eq("user_name", username));
         if (null == sysUser) {
-            Result.fail("用户不存在");
+            R.fail("用户不存在");
         }
         if (!BcryptUtil.match(password, sysUser.getPassword())) {
-            return Result.fail("密码错误");
+            return R.fail("密码错误");
         }
         Map<String,Object> userMap= BeanUtil.beanToMap(sysUser);
         String jwtToken = jwtUtil.createJwtToken(sysUser.getId().toString(), CacheTime.JWT_EXPIRE_SECONDS/60);
@@ -66,6 +66,6 @@ public class SysUserServiceImpl extends ServiceImpl<UserMapper, SysUser> impleme
         loginUser.setToken(jwtToken);
         redisUtil.set(AuthConstats.USER_TOKEN_PREFIX + loginUser.getId(), loginUser, CacheTime.JWT_REDDIS_EXPIRE, TimeUnit.SECONDS);
         log.info("用户: {},登录成功!,token过期时间:{}",loginUser.getUserName(),expiredTime);
-        return Result.success(object);
+        return R.success(object);
     }
 }

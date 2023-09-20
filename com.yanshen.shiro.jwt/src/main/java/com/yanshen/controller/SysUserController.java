@@ -1,7 +1,7 @@
 package com.yanshen.controller;
 
 
-import com.yanshen.common.Result;
+import com.yanshen.common.R;
 import com.yanshen.entity.SysUser;
 import com.yanshen.service.SysUserService;
 import com.yanshen.util.BcryptUtil;
@@ -24,25 +24,25 @@ public class SysUserController {
     private SysUserService userService;
 
     @PostMapping("/register")
-    public Result<SysUser> register(@RequestBody SysUser sysUser) {
+    public R<SysUser> register(@RequestBody SysUser sysUser) {
         sysUser.setPassword(BcryptUtil.encode(sysUser.getPassword()));
         userService.save(sysUser);
-        return Result.success(sysUser);
+        return R.success(sysUser);
     }
 
     @PostMapping("/login")
-    public Result login(@RequestParam String username, @RequestParam String password) {
+    public R login(@RequestParam String username, @RequestParam String password) {
         // 从数据库中查找用户的信息，信息正确生成token
         return userService.login(username, password);
     }
 
     @GetMapping("/detail")
-    public Result detail(@RequestParam String id) {
+    public R detail(@RequestParam String id) {
         try {
-            return Result.success(userService.getById(id));
+            return R.success(userService.getById(id));
         } catch (Exception e) {
             e.printStackTrace();
-            return Result.fail(e.getMessage());
+            return R.fail(e.getMessage());
         }
     }
 }

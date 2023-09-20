@@ -1,16 +1,18 @@
 package com.yanshen.handler;
 
-import com.yanshen.common.Result;
+import com.yanshen.common.R;
 import io.lettuce.core.RedisConnectionException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.ShiroException;
 import org.apache.shiro.authz.UnauthorizedException;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver;
+
+import java.sql.SQLException;
 
 /**
  * @Desc: 全局异常处理器
@@ -23,39 +25,45 @@ import org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolv
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(RuntimeException.class)
-    public Result handler(RuntimeException e){
+    public R handler(RuntimeException e){
         e.printStackTrace();
         log.info("运行时异常：",e.getMessage());
-        return Result.fail(e.getMessage());
+        return R.fail(e.getMessage());
     }
 
     @ResponseStatus(HttpStatus.UNAUTHORIZED)
     @ExceptionHandler(value = ShiroException.class)
-    public Result handler(ShiroException e) {
+    public R handler(ShiroException e) {
         log.error("运行时异常：----------------{}", e);
-        return Result.fail( e.getMessage());
+        return R.fail( e.getMessage());
     }
 
     @ExceptionHandler(value = UnauthorizedException.class)
-    public Result handler(UnauthorizedException e){
+    public R handler(UnauthorizedException e){
         log.error("没有相关权限");
         String msg = e.getMessage().split(" ")[5];
-        return Result.fail("没有相关权限: "+msg);
+        return R.fail("没有相关权限: "+msg);
     }
     @ExceptionHandler(value = MissingServletRequestParameterException.class)
-    public Result handler(MissingServletRequestParameterException e){
+    public R handler(MissingServletRequestParameterException e){
         log.error("没有相关权限");
         String msg = e.getMessage();//.split(" ")[5];
-        return Result.fail("参数错误: "+msg);
+        return R.fail("参数错误: "+msg);
     }
 
 
     @ExceptionHandler(value = RedisConnectionException.class)
-    public Result handler(RedisConnectionException e){
+    public R handler(RedisConnectionException e){
         log.error("没有相关权限");
         String msg = e.getMessage();//.split(" ")[5];
-        return Result.fail("系统异常: 缓存服务不可用");
+        return R.fail("系统异常: 缓存服务不可用");
     }
 
 
+    @ExceptionHandler(value = DataIntegrityViolationException.class)
+    public R handler(DataIntegrityViolationException e){
+        log.error("数据库执行异常:{}",e);
+        String msg = e.getMessage().split(" ")[5];
+        return R.fail("数据库执行异常: "+e.getCause().getMessage());
+    }
 }
