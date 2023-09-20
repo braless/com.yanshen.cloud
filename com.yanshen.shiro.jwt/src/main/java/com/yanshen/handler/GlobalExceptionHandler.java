@@ -1,13 +1,16 @@
 package com.yanshen.handler;
 
 import com.yanshen.common.Result;
+import io.lettuce.core.RedisConnectionException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.ShiroException;
 import org.apache.shiro.authz.UnauthorizedException;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver;
 
 /**
  * @Desc: 全局异常处理器
@@ -21,6 +24,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(RuntimeException.class)
     public Result handler(RuntimeException e){
+        e.printStackTrace();
         log.info("运行时异常：",e.getMessage());
         return Result.fail(e.getMessage());
     }
@@ -37,6 +41,20 @@ public class GlobalExceptionHandler {
         log.error("没有相关权限");
         String msg = e.getMessage().split(" ")[5];
         return Result.fail("没有相关权限: "+msg);
+    }
+    @ExceptionHandler(value = MissingServletRequestParameterException.class)
+    public Result handler(MissingServletRequestParameterException e){
+        log.error("没有相关权限");
+        String msg = e.getMessage();//.split(" ")[5];
+        return Result.fail("参数错误: "+msg);
+    }
+
+
+    @ExceptionHandler(value = RedisConnectionException.class)
+    public Result handler(RedisConnectionException e){
+        log.error("没有相关权限");
+        String msg = e.getMessage();//.split(" ")[5];
+        return Result.fail("系统异常: 缓存服务不可用");
     }
 
 

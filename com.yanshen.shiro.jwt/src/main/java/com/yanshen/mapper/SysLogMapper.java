@@ -1,6 +1,6 @@
 package com.yanshen.mapper;
 
-import com.yanshen.entity.SysUser;
+import com.yanshen.entity.SysLog;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -9,10 +9,10 @@ import org.apache.ibatis.annotations.Mapper;
  *  Mapper 接口
  * </p>
  *
- * @author 知否技术
- * @since 2022-03-09
+ * @author @Yanchao
+ * @since 2023-09-15
  */
 @Mapper
-public interface UserMapper extends BaseMapper<SysUser> {
+public interface SysLogMapper extends BaseMapper<SysLog> {
 
 }

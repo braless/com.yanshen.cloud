@@ -28,7 +28,7 @@ mybatis-plus:
       db-type: mysql
       id-type: assign_id
   mapper-locations: classpath*:/mapper/**Mapper.xml
-  type-aliases-package: com.zhifou.entity
+  type-aliases-package: com.yanshen.entity
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 #jwt

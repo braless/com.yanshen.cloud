@@ -3,7 +3,7 @@
 <mapper namespace="com.yanshen.mapper.UserMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.yanshen.entity.User">
+    <resultMap id="BaseResultMap" type="com.yanshen.entity.SysUser">
         <id column="id" property="id" />
         <result column="name" property="name" />
         <result column="age" property="age" />

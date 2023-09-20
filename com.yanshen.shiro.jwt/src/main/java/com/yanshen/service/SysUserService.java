@@ -1,7 +1,7 @@
 package com.yanshen.service;
 
 import com.yanshen.common.Result;
-import com.yanshen.entity.User;
+import com.yanshen.entity.SysUser;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -12,7 +12,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author 知否技术
  * @since 2022-03-09
  */
-public interface UserService extends IService<User> {
+public interface SysUserService extends IService<SysUser> {
 
     Result login(String username, String password);
 

@@ -15,7 +15,7 @@ import java.util.Date;
 
 @EnableTransactionManagement
 @Configuration
-@MapperScan("com.zhifou.mapper.*")
+@MapperScan("com.yanshen.mapper.*")
 public class MybatisPlusConfig implements MetaObjectHandler {
 
 

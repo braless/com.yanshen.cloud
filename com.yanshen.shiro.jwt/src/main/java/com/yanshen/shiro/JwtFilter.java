@@ -2,6 +2,7 @@ package com.yanshen.shiro;
 
 import cn.hutool.json.JSONUtil;
 import com.yanshen.common.Result;
+import com.yanshen.constants.AuthConstats;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
@@ -70,7 +71,7 @@ public class JwtFilter extends BasicHttpAuthenticationFilter {
         //
         // 判断请求头是否带上“Token”
         HttpServletRequest httpServletRequest = (HttpServletRequest) request;
-        String token = httpServletRequest.getHeader("Authorization");
+        String token = httpServletRequest.getHeader(AuthConstats.JWT_TOKEN_HEADER);
         // 游客访问电商平台首页可以不用携带 token
         if (StringUtils.isEmpty(token)) {
             errorMsg="当前用户未登录";

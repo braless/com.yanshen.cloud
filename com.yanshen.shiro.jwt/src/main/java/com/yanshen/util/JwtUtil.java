@@ -5,6 +5,7 @@ import com.auth0.jwt.JWTCreator;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTDecodeException;
 import com.auth0.jwt.interfaces.DecodedJWT;
+import com.yanshen.common.ClaimEnum;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections.MapUtils;
@@ -22,25 +23,27 @@ public class JwtUtil {
     // 秘钥
     @Setter
     private String secret;
-    private static final long TIME_UNIT = 1000;
+    private static final long TIME_UNIT = 1000;//毫秒
 
     // 生成包含用户id的token
     public String createJwtToken(String userId, long expireTime) {
         Date date = new Date(System.currentTimeMillis() + expireTime * TIME_UNIT);
+        //过期时间为当前时间向后延迟 N 秒
         Algorithm algorithm = Algorithm.HMAC256(secret);
-
         return JWT.create()
+                .withClaim("iss", ClaimEnum.WEB_COMMON.getCode())
+                .withClaim("aud",ClaimEnum.WEB_USER.getCode())
                 .withClaim("userId", userId)
                 .withExpiresAt(date) // 设置过期时间
                 .sign(algorithm);     // 设置签名算法
     }
 
     // 生成包含自定义信息的token
-    public String createJwtToken(Map<String, String> map, long expireTime) {
+    public String createJwtToken(Map<String, Object> map, long expireTime) {
         JWTCreator.Builder builder = JWT.create();
         if (MapUtils.isNotEmpty(map)) {
             map.forEach((k, v) -> {
-                builder.withClaim(k, v);
+                builder.withClaim(k, (Boolean) v);
             });
         }
         Date date = new Date(System.currentTimeMillis() + expireTime * TIME_UNIT);
@@ -61,7 +64,7 @@ public class JwtUtil {
     }
 
     // 从token中获取用户id
-    public String getUserId(String token) {
+    public static String getUserId(String token) {
         try {
             DecodedJWT jwt = JWT.decode(token);
             return jwt.getClaim("userId").asString();

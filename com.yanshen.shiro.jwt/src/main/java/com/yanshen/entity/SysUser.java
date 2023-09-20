@@ -24,7 +24,7 @@ import lombok.experimental.Accessors;
 @Setter
 @Accessors(chain = true)
 @TableName("t_user")
-public class User implements Serializable {
+public class SysUser implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -37,7 +37,7 @@ public class User implements Serializable {
     /**
      * 姓名
      */
-    private String name;
+    private String nickName;
 
     /**
      * 年龄
@@ -47,12 +47,12 @@ public class User implements Serializable {
     /**
      * 性别：0-女 1-男
      */
-    private Integer sex;
+    private Integer gender;
 
     /**
      * 账号
      */
-    private String username;
+    private String userName;
 
     /**
      * 密码

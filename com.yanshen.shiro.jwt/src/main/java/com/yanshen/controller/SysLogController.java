@@ -1,26 +1,52 @@
 package com.yanshen.controller;
 
-import cn.hutool.json.JSONObject;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.yanshen.common.PageData;
 import com.yanshen.common.Result;
+import com.yanshen.entity.LoginUser;
+import com.yanshen.entity.SysLog;
+import com.yanshen.service.SysLogService;
+import com.yanshen.util.ThreadLocalUtils;
+import org.apache.shiro.SecurityUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @Auther: @Yanchao
- * @Date: 2023-09-15 10:54
- * @Description:
- * @Location: com.zhifou.controller
- * @Project: shiro_jwt
+ * <p>
+ *  前端控制器
+ * </p>
+ *
+ * @author @Yanchao
+ * @since 2023-09-15
  */
 @RestController
-@RequestMapping("/sys")
+@RequestMapping("/sys-log")
 public class SysLogController {
-    //注解验角色和权限
-    //@RequiresRoles("common")
-    @RequestMapping("/log")
-    public Result queryLog(){
-        String msg ="您可以访问日志系统!";
-        return Result.success(new JSONObject().set("tips",msg));
+    @Autowired
+    SysLogService sysLogService;
+
+
+    @RequestMapping("/page")
+    public Result<PageData<SysLog>> queryPage(@RequestParam Integer pageNum, @RequestParam Integer pageSize ){
+        Page<SysLog> page =new Page<>(pageNum,pageSize);
+        LambdaQueryWrapper<SysLog> query=new LambdaQueryWrapper<>();
+        query.likeRight(SysLog::getReqUrl,"url-6");
+        Page<SysLog> data = sysLogService.page(page,query);
+        //PageData<SysLog> pageData =new PageData<>(data.getRecords(), data.getTotal(),pageNum,pageSize);
+        return Result.success(new PageData<>(data));
+
+    }
+
+    //@WebAuth
+    @RequestMapping("/getMe")
+    public Result getUser(){
+        LoginUser sysUser = (LoginUser)SecurityUtils.getSubject().getPrincipal();
+        String currentUserId = ThreadLocalUtils.getCurrentUserId();
+        return Result.success(currentUserId);
     }
 }

@@ -14,7 +14,7 @@ import java.util.Map;
 
 
 @Configuration
-@ComponentScan(value = "com.zhifou")
+@ComponentScan(value = "com.yanshen")
 public class ShiroConfig {
 
     // 1.shiroFilter：负责拦截所有请求
@@ -36,6 +36,7 @@ public class ShiroConfig {
         Map<String, String> map = new HashMap<String, String>();
         map.put("/index.jsp", "authc");
         map.put("/user/login","anon");
+        map.put("/tenant/login","anon");
         map.put("/user/register","anon");
         map.put("/login.jsp","anon");
         map.put("/**", "jwt");   // 所有请求通过我们自己的过滤器

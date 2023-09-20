@@ -2,8 +2,8 @@ package com.yanshen.controller;
 
 
 import com.yanshen.common.Result;
-import com.yanshen.entity.User;
-import com.yanshen.service.UserService;
+import com.yanshen.entity.SysUser;
+import com.yanshen.service.SysUserService;
 import com.yanshen.util.BcryptUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -18,16 +18,16 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping("/user")
-public class UserController {
+public class SysUserController {
 
     @Autowired
-    private UserService userService;
+    private SysUserService userService;
 
     @PostMapping("/register")
-    public Result<User> register(@RequestBody User user) {
-        user.setPassword(BcryptUtil.encode(user.getPassword()));
-        userService.save(user);
-        return Result.success(user);
+    public Result<SysUser> register(@RequestBody SysUser sysUser) {
+        sysUser.setPassword(BcryptUtil.encode(sysUser.getPassword()));
+        userService.save(sysUser);
+        return Result.success(sysUser);
     }
 
     @PostMapping("/login")
