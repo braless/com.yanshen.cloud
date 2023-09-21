@@ -58,13 +58,13 @@ public class MyRealm extends AuthorizingRealm {
      */
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
-
+        log.warn("===============Shiro权限认证开始============doGetAuthenticationInfo==========");
         //获取登录用户名
-        String userName = (String) principals.getPrimaryPrincipal();
+        LoginUser loginUser = (LoginUser) principals.getPrimaryPrincipal();
         //添加角色和权限
         SimpleAuthorizationInfo simpleAuthorizationInfo = new SimpleAuthorizationInfo();
         // 设置用户拥有的角色集合，比如“admin,test”
-        Set<String> roleSet = commonAPI.queryUserRoles(userName);
+        Set<String> roleSet = commonAPI.queryUserRoles(loginUser.getUserName());
 //        List<Map<String, Object>> powerList = loginService.getUserPower(userName);
 //        System.out.println(powerList.toString());
 //        for (Map<String, Object> powerMap : powerList) {

@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletRequest;
  * @Location: com.yanshen.controller
  * @Project: com.yanshen.cloud
  */
-@RestController
+//@RestController
 public class CustomErrorController implements ErrorController {
 
     private static final String PATH = "/error";

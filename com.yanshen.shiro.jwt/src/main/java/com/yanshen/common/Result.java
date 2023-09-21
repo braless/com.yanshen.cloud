@@ -11,23 +11,23 @@ import java.io.Serializable;
  * @date: 下午9:44 2022/10/24
  */
 @Data
-public class R<T> implements Serializable {
+public class Result<T> implements Serializable {
 
     private Integer code;
     private String message;
     private long timestamp;
     private T Data;
 
-    public static R success(Object object){
-        R r = new R();
+    public static Result success(Object object){
+        Result r = new Result();
         r.setCode(200);
         r.setData(object);
         r.setTimestamp(System.currentTimeMillis());
         r.setMessage("操作成功");
         return r;
     }
-    public static R success(){
-        R r = new R();
+    public static Result success(){
+        Result r = new Result();
         r.setCode(200);
         r.setData(null);
         r.setTimestamp(System.currentTimeMillis());
@@ -35,16 +35,16 @@ public class R<T> implements Serializable {
         return r;
     }
 
-    public static R fail(String message){
-        R r = new R();
+    public static Result fail(String message){
+        Result r = new Result();
         r.setCode(ResultCodeEnum.PARAM_ERROR.getCode());
         r.setData(null);
         r.setMessage(message);
         r.setTimestamp(System.currentTimeMillis());
         return r;
     }
-    public static R fail(Integer code, String message){
-        R result = new R();
+    public static Result fail(Integer code, String message){
+        Result result = new Result();
         result.setCode(code);
         result.setData(null);
         result.setMessage(message);

@@ -1,5 +1,7 @@
 package com.yanshen.api;
 
+import org.springframework.stereotype.Service;
+
 import java.util.Set;
 
 /**

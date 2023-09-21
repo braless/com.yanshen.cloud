@@ -4,9 +4,11 @@ import org.apache.shiro.mgt.DefaultSessionStorageEvaluator;
 import org.apache.shiro.mgt.DefaultSubjectDAO;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
+import org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.DependsOn;
 
 import javax.servlet.Filter;
 import java.util.HashMap;
@@ -14,7 +16,7 @@ import java.util.Map;
 
 
 @Configuration
-@ComponentScan(value = "com.yanshen")
+@ComponentScan(value = "com.yanshen.*")
 public class ShiroConfig {
 
     // 1.shiroFilter：负责拦截所有请求
@@ -58,5 +60,23 @@ public class ShiroConfig {
         subjectDAO.setSessionStorageEvaluator(defaultSessionStorageEvaluator);
         securityManager.setSubjectDAO(subjectDAO);
         return securityManager;
+    }
+
+    /**
+     * 下面的代码是添加注解支持
+     * @return
+     */
+    @Bean
+    @DependsOn("lifecycleBeanPostProcessor")
+    public DefaultAdvisorAutoProxyCreator defaultAdvisorAutoProxyCreator() {
+        DefaultAdvisorAutoProxyCreator defaultAdvisorAutoProxyCreator = new DefaultAdvisorAutoProxyCreator();
+        defaultAdvisorAutoProxyCreator.setProxyTargetClass(true);
+        /**
+         * 解决重复代理问题 github#994
+         * 添加前缀判断 不匹配 任何Advisor
+         */
+        defaultAdvisorAutoProxyCreator.setUsePrefix(true);
+        defaultAdvisorAutoProxyCreator.setAdvisorBeanNamePrefix("_no_advisor");
+        return defaultAdvisorAutoProxyCreator;
     }
 }

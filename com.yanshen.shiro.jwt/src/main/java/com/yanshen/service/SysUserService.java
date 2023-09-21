@@ -1,6 +1,6 @@
 package com.yanshen.service;
 
-import com.yanshen.common.R;
+import com.yanshen.common.Result;
 import com.yanshen.entity.SysUser;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -14,6 +14,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface SysUserService extends IService<SysUser> {
 
-    R login(String username, String password);
+    Result login(String username, String password);
 
 }

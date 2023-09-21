@@ -3,7 +3,7 @@ package com.yanshen.controller;
 import cn.hutool.core.bean.BeanUtil;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.yanshen.common.CacheTime;
-import com.yanshen.common.R;
+import com.yanshen.common.Result;
 import com.yanshen.constants.AuthConstats;
 import com.yanshen.entity.LoginUser;
 import com.yanshen.entity.SysTenant;
@@ -17,9 +17,7 @@ import org.apache.shiro.authc.AuthenticationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import io.swagger.annotations.Api;
@@ -49,7 +47,7 @@ public class SysTenantController {
     RedisUtil redisUtil;
 
     @GetMapping(value = "/login")
-    public R tenantLogin(@RequestParam String userName, @RequestParam String password) {
+    public Result tenantLogin(@RequestParam String userName, @RequestParam String password) {
         SysTenant sysTenant = sysTenantService.getOne(new LambdaQueryWrapper<SysTenant>().eq(SysTenant::getUserName, userName));
         String userId = sysTenant.getUserName();
         String jwtToken = jwtUtil.createJwtToken(sysTenant.getUserName(), CacheTime.JWT_EXPIRE_SECONDS);
@@ -61,7 +59,7 @@ public class SysTenantController {
         redisUtil.set(AuthConstats.USER_TOKEN_PREFIX + userId, loginUser, CacheTime.JWT_REDDIS_EXPIRE, TimeUnit.SECONDS);
         dto.setToken(jwtToken);
         dto.setExpireAt(expTime + "");
-        return R.success(dto);
+        return Result.success(dto);
     }
 
 
@@ -91,12 +89,12 @@ public class SysTenantController {
 
     @PostMapping("/register")
     @ApiOperation(value = "新增", notes = "SysTenant")
-    public R saveSysTenant(@RequestBody SysTenant sysTenant) {
+    public Result saveSysTenant(@RequestBody SysTenant sysTenant) {
 //        long l = idWorker.nextId();
 //        sysTenant.setId(idWorker.nextId());
         sysTenant.setPassword(BcryptUtil.encode(sysTenant.getPassword()));
         sysTenantService.save(sysTenant);
-        return R.success();
+        return Result.success();
 
     }
 
@@ -114,9 +112,9 @@ public class SysTenantController {
 
     @PostMapping("/remove")
     @ApiOperation(value = "删除", notes = "SysTenant")
-    public R remove(Long id) {
+    public Result remove(Long id) {
         sysTenantService.removeById(id);
-        return  R.success(id);
+        return  Result.success(id);
     }
 
 }

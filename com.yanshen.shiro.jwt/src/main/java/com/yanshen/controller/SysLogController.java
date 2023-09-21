@@ -4,12 +4,13 @@ package com.yanshen.controller;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.yanshen.common.PageData;
-import com.yanshen.common.R;
+import com.yanshen.common.Result;
 import com.yanshen.entity.LoginUser;
 import com.yanshen.entity.SysLog;
 import com.yanshen.service.SysLogService;
 import com.yanshen.util.ThreadLocalUtils;
 import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -32,21 +33,22 @@ public class SysLogController {
 
 
     @RequestMapping("/page")
-    public R<PageData<SysLog>> queryPage(@RequestParam Integer pageNum, @RequestParam Integer pageSize ){
+    public Result<PageData<SysLog>> queryPage(@RequestParam Integer pageNum, @RequestParam Integer pageSize ){
         Page<SysLog> page =new Page<>(pageNum,pageSize);
         LambdaQueryWrapper<SysLog> query=new LambdaQueryWrapper<>();
         query.likeRight(SysLog::getReqUrl,"url-6");
         Page<SysLog> data = sysLogService.page(page,query);
         //PageData<SysLog> pageData =new PageData<>(data.getRecords(), data.getTotal(),pageNum,pageSize);
-        return R.success(new PageData<>(data));
+        return Result.success(new PageData<>(data));
 
     }
 
     //@WebAuth
+    @RequiresRoles("admin")
     @RequestMapping("/getMe")
-    public R getUser(){
+    public Result getUser(){
         LoginUser sysUser = (LoginUser)SecurityUtils.getSubject().getPrincipal();
         String currentUserId = ThreadLocalUtils.getCurrentUserId();
-        return R.success(currentUserId);
+        return Result.success(currentUserId);
     }
 }
