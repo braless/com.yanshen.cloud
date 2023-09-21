@@ -23,6 +23,12 @@ public class SysUserController {
     @Autowired
     private SysUserService userService;
 
+
+    @GetMapping("/list")
+    public R list(){
+       return R.success( userService.list());
+    }
+
     @PostMapping("/register")
     public R<SysUser> register(@RequestBody SysUser sysUser) {
         sysUser.setPassword(BcryptUtil.encode(sysUser.getPassword()));

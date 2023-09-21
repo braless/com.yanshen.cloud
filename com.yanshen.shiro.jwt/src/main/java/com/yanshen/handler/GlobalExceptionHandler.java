@@ -7,12 +7,14 @@ import org.apache.shiro.ShiroException;
 import org.apache.shiro.authz.UnauthorizedException;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
+import org.springframework.jdbc.BadSqlGrammarException;
 import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import java.sql.SQLException;
+import java.sql.SQLSyntaxErrorException;
 
 /**
  * @Desc: 全局异常处理器
@@ -66,4 +68,19 @@ public class GlobalExceptionHandler {
         String msg = e.getMessage().split(" ")[5];
         return R.fail("数据库执行异常: "+e.getCause().getMessage());
     }
+
+    /**
+     * 表不存在异常
+     * @param e
+     * @return
+     */
+    @ExceptionHandler(value = BadSqlGrammarException.class)
+    public R handler(BadSqlGrammarException e){
+        log.error("数据库执行异常:{}",e);
+        String msg = e.getMessage().split(" ")[5];
+        return R.fail("数据库执行异常: "+e.getCause().getMessage());
+    }
+
+
+
 }

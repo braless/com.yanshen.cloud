@@ -35,7 +35,7 @@ public class ShiroConfig {
         // 配置系统受限资源
         Map<String, String> map = new HashMap<String, String>();
         map.put("/index.jsp", "authc");
-        map.put("/user/login","anon");
+        map.put("/user/**","anon");
         map.put("/tenant/login","anon");
         map.put("/user/register","anon");
         map.put("/login.jsp","anon");

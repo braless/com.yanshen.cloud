@@ -66,7 +66,8 @@ public class MybatisPlusGenerator {
                 //getTables(scanner.apply("请输入表名，多个英文逗号分隔？所有输入 all"))
                 // builder.notLikeTable(new LikeTable("act", SqlLike.RIGHT))
                 .strategyConfig((scanner, builder) -> builder.addInclude()
-                        .likeTable(new LikeTable("sys_tenant",SqlLike.RIGHT))//生成哪个表名
+                        //.likeTable(new LikeTable("sys_tenant",SqlLike.RIGHT))//生成哪个表名
+                        .addInclude("sys_permission")
                         //.notLikeTable(new LikeTable("tenant", SqlLike.RIGHT))
                         .controllerBuilder().enableRestStyle().enableHyphenStyle()
                         .entityBuilder().enableLombok()

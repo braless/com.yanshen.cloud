@@ -9,6 +9,7 @@ package com.yanshen.shiro;
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.util.ObjectUtil;
 import cn.hutool.core.util.StrUtil;
+import com.yanshen.api.CommonAPI;
 import com.yanshen.common.CacheTime;
 import com.yanshen.constants.AuthConstats;
 import com.yanshen.entity.LoginUser;
@@ -17,12 +18,18 @@ import com.yanshen.util.RedisUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
+import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
 import java.util.Date;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 @Component
@@ -33,6 +40,10 @@ public class MyRealm extends AuthorizingRealm {
     private RedisUtil redisUtil;
     @Autowired
     private JwtUtil jwtUtil;
+
+    @Lazy
+    @Resource
+    private CommonAPI commonAPI;
 
     /**
      * 限定这个realm只能处理JwtToken
@@ -47,8 +58,25 @@ public class MyRealm extends AuthorizingRealm {
      */
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
+
+        //获取登录用户名
+        String userName = (String) principals.getPrimaryPrincipal();
+        //添加角色和权限
+        SimpleAuthorizationInfo simpleAuthorizationInfo = new SimpleAuthorizationInfo();
+        // 设置用户拥有的角色集合，比如“admin,test”
+        Set<String> roleSet = commonAPI.queryUserRoles(userName);
+//        List<Map<String, Object>> powerList = loginService.getUserPower(userName);
+//        System.out.println(powerList.toString());
+//        for (Map<String, Object> powerMap : powerList) {
+//            //添加角色
+//            simpleAuthorizationInfo.addRole(String.valueOf(powerMap.get("roleName")));
+//            //添加权限
+//            simpleAuthorizationInfo.addStringPermission(String.valueOf(powerMap.get("permissionsName")));
+//        }
+        simpleAuthorizationInfo.setRoles(roleSet);
+        return simpleAuthorizationInfo;
         // 获取到用户名，查询用户权限
-        return null;
+        //return null;
     }
 
     /**
