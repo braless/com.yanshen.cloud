@@ -8,6 +8,7 @@ import com.yanshen.common.CacheTime;
 import com.yanshen.common.Result;
 import com.yanshen.entity.LoginUser;
 import com.yanshen.entity.SysUser;
+import com.yanshen.entity.dto.LoginDTO;
 import com.yanshen.mapper.UserMapper;
 import com.yanshen.service.SysUserService;
 import com.yanshen.util.BcryptUtil;
@@ -42,13 +43,13 @@ public class SysUserServiceImpl extends ServiceImpl<UserMapper, SysUser> impleme
     private RedisUtil redisUtil;
 
     @Override
-    public Result login(String username, String password) {
+    public Result login(LoginDTO loginDTO) {
         // 先从数据库查询
-        SysUser sysUser = this.getOne(new QueryWrapper<SysUser>().eq("user_name", username));
+        SysUser sysUser = this.getOne(new QueryWrapper<SysUser>().eq("user_name", loginDTO.getUserName()));
         if (null == sysUser) {
             Result.fail("用户不存在");
         }
-        if (!BcryptUtil.match(password, sysUser.getPassword())) {
+        if (!BcryptUtil.match(loginDTO.getPassword(), sysUser.getPassword())) {
             return Result.fail("密码错误");
         }
         Map<String,Object> userMap= BeanUtil.beanToMap(sysUser);
@@ -56,14 +57,16 @@ public class SysUserServiceImpl extends ServiceImpl<UserMapper, SysUser> impleme
         //String jwtToken = jwtUtil.createJwtToken(userMap, EXPIRE_SECONDS);
         long exp =jwtUtil.getExpTime(jwtToken);
         String expiredTime= DateUtil.format(new Date(exp),"yyyy-MM-dd HH:mm:ss");
+        String loginTime =DateUtil.format(new Date(),"yyyy-MM-dd HH:mm:ss");
         JSONObject object =new JSONObject();
         object.set("expire_at",expiredTime);
         object.set("token",jwtToken);
         LoginUser loginUser =new LoginUser();
         BeanUtils.copyProperties(sysUser,loginUser);
         object.set("userInfo", loginUser);
-        loginUser.setExpireAt(expiredTime);
         loginUser.setToken(jwtToken);
+        loginUser.setExpireAt(expiredTime);
+        loginUser.setLoginTime(loginTime);
         redisUtil.set(AuthConstats.USER_TOKEN_PREFIX + loginUser.getId(), loginUser, CacheTime.JWT_REDDIS_EXPIRE, TimeUnit.SECONDS);
         log.info("用户: {},登录成功!,token过期时间:{}",loginUser.getUserName(),expiredTime);
         return Result.success(object);

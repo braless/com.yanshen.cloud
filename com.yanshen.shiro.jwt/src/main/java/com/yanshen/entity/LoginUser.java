@@ -37,6 +37,11 @@ public class LoginUser {
     private Integer age;
 
     /**
+     * 用户头像
+     */
+    private String userAvatar;
+
+    /**
      * 性别：0-女 1-男
      */
     private Integer sex;
@@ -52,19 +57,24 @@ public class LoginUser {
      */
     @TableField(fill = FieldFill.INSERT)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
-    private Date createdDate;
+    private Date createTime;
 
     /**
      * 修改时间
      */
     @TableField(fill = FieldFill.UPDATE)
-    private Date updatedDate;
+    private Date updateTime;
 
     /**
      * 删除标识
      */
     @TableLogic
     private Integer isDeleted;
+
+    /**
+     * 登录时间
+     */
+    private String loginTime;
     private String expireAt;
     private String token;
     private String refreshToken;

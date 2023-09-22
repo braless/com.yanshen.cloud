@@ -3,6 +3,7 @@ package com.yanshen.service;
 import com.yanshen.common.Result;
 import com.yanshen.entity.SysUser;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.yanshen.entity.dto.LoginDTO;
 
 /**
  * <p>
@@ -14,6 +15,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface SysUserService extends IService<SysUser> {
 
-    Result login(String username, String password);
+    Result login(LoginDTO loginDTO);
 
 }

@@ -39,6 +39,7 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(value = UnauthorizedException.class)
+
     public Result handler(UnauthorizedException e){
         log.error("没有相关权限");
         String msg = e.getMessage().split(" ")[5];
@@ -85,6 +86,7 @@ public class GlobalExceptionHandler {
      * @return
      */
     @ExceptionHandler(HttpRequestMethodNotSupportedException.class)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public Result<?> handler(HttpRequestMethodNotSupportedException e){
         StringBuffer sb = new StringBuffer();
         sb.append("不支持");

@@ -46,6 +46,10 @@ public class SysUser implements Serializable {
      * 年龄
      */
     private Integer age;
+    /**
+     * 用户头像
+     */
+    private String userAvatar;
 
     /**
      * 性别：0-女 1-男

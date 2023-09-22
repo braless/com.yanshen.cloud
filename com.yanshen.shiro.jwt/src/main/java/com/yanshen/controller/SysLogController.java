@@ -33,7 +33,8 @@ public class SysLogController {
 
 
     @RequestMapping("/page")
-    public Result<PageData<SysLog>> queryPage(@RequestParam Integer pageNum, @RequestParam Integer pageSize ){
+    public Result<PageData<SysLog>> queryPage(@RequestParam(value ="pageNum" ,required = false,defaultValue = "1") Integer pageNum,
+                                              @RequestParam (value = "pageSize",required = false,defaultValue = "10") Integer pageSize ){
         Page<SysLog> page =new Page<>(pageNum,pageSize);
         LambdaQueryWrapper<SysLog> query=new LambdaQueryWrapper<>();
         query.likeRight(SysLog::getReqUrl,"url-6");
