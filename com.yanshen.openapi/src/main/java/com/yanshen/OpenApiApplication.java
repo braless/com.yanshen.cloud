@@ -21,7 +21,7 @@ import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication(scanBasePackages = {"com.yanshen.*"})
 @EnableFeignClients(basePackages = {"com.yanshen.*"})
-@MapperScan("com.yanshen.*")
+@MapperScan("com.yanshen.mapper")
 @EnableEurekaClient
 public class OpenApiApplication {
     @Value("${idworker.datacenter:0}") //默认1
