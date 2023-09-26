@@ -26,10 +26,7 @@ import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 @Component
@@ -64,7 +61,8 @@ public class MyRealm extends AuthorizingRealm {
         //添加角色和权限
         SimpleAuthorizationInfo simpleAuthorizationInfo = new SimpleAuthorizationInfo();
         // 设置用户拥有的角色集合，比如“admin,test”
-        Set<String> roleSet = commonAPI.queryUserRoles(loginUser.getUserName());
+        Set<String> roleSet = new HashSet<>();//commonAPI.queryUserRoles(loginUser.getUserName());
+        roleSet.add("manager");
 //        List<Map<String, Object>> powerList = loginService.getUserPower(userName);
 //        System.out.println(powerList.toString());
 //        for (Map<String, Object> powerMap : powerList) {
@@ -146,7 +144,7 @@ public class MyRealm extends AuthorizingRealm {
                 loginUser.setExpireAt(expiredTime);
                 loginUser.setRefreshToken(newToken);
                 redisUtil.set("user_token:" + loginUser.getId(), loginUser, CacheTime.JWT_EXPIRE_SECONDS, TimeUnit.SECONDS);// 7200秒  2小时
-                log.warn("{},登录刷新token.....,有效期至:{}", loginUser.getUserName(),expiredTime);
+                log.warn("用户: {},界面动作,刷新token.....,有效期至:{}", loginUser.getUserName(),expiredTime);
             }
             return true;
         }

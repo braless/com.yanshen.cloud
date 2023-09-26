@@ -1,6 +1,7 @@
 package com.yanshen.controller;
 import com.yanshen.entity.SysUserRole;
 import com.yanshen.service.ISysUserRoleService;
+import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,6 +28,7 @@ public class SysUserRoleController {
 
     @GetMapping("/list")
     @ApiOperation(value = "用户角色表列表查询",notes = "list")
+    @RequiresRoles("admin")
     public List<SysUserRole> list(){
         return sysUserRoleService.list();
     }

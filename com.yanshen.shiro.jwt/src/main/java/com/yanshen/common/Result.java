@@ -34,6 +34,14 @@ public class Result<T> implements Serializable {
         r.setMessage("操作成功");
         return r;
     }
+    public static Result success(String message){
+        Result r = new Result();
+        r.setCode(200);
+        r.setData(null);
+        r.setTimestamp(System.currentTimeMillis());
+        r.setMessage(message);
+        return r;
+    }
 
     public static Result fail(String message){
         Result r = new Result();

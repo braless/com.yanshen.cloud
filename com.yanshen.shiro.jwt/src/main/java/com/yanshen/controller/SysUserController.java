@@ -1,6 +1,7 @@
 package com.yanshen.controller;
 
 
+import cn.dev33.satoken.stp.StpUtil;
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.util.RandomUtil;
 import cn.hutool.json.JSONObject;
@@ -58,7 +59,10 @@ public class SysUserController {
     @PostMapping("/register")
     public Result<SysUser> register(@RequestBody SysUser sysUser) {
         sysUser.setPassword(BcryptUtil.encode(sysUser.getPassword()));
-        userService.save(sysUser);
+        boolean save = userService.save(sysUser);
+        if(save){
+            StpUtil.login(sysUser.getUserName());
+        }
         return Result.success(sysUser);
     }
 
@@ -118,6 +122,6 @@ public class SysUserController {
     public Result logOut() {
         String currentUserId = ThreadLocalUtils.getCurrentUserId();
         redisUtil.delete(AuthConstats.USER_TOKEN_PREFIX+currentUserId);
-        return Result.success();
+        return Result.success("傻逼!");
     }
 }
