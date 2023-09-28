@@ -6,11 +6,11 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 120.46.171.189:8848
-        namespace: 7b488f71-2b60-4131-813a-707f4559d3e2
+        server-addr: 192.168.1.47:8848
+        namespace: 442ea6d7-dfe2-44bd-8d45-35d42370a89b
       config:
-        server-addr: 120.46.171.189:8848
-        namespace: 7b488f71-2b60-4131-813a-707f4559d3e2
+        server-addr: 192.168.1.47:8848
+        namespace: 442ea6d7-dfe2-44bd-8d45-35d42370a89b
         group: DEFAULT_GROUP
         file-extension: yml
         refresh-enabled: true
