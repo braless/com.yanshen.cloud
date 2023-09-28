@@ -9,10 +9,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication(exclude = RedisAutoConfiguration.class)
 @EnableFeignClients
 @EnableDiscoveryClient
-public class OrderService {
+public class MqListenService {
 
     public static void main(String[] args) {
-        SpringApplication.run(OrderService.class, args);
+        SpringApplication.run(MqListenService.class, args);
     }
 
 }
