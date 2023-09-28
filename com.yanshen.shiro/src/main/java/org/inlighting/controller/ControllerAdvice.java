@@ -38,7 +38,7 @@ public class ControllerAdvice {
 	@ExceptionHandler(NoHandlerFoundException.class)
 	public Result<?> handlerNoFoundException(Exception e) {
 		log.error(e.getMessage(), e);
-		return Result.failed(ResultCode.RESOURCES_NOT_EXIST, ResultCode.RESOURCES_NOT_EXIST.getMessage());
+		return Result.failed(ResultCode.RESOURCES_NOT_EXIST.getCode(), ResultCode.RESOURCES_NOT_EXIST.getMessage());
 	}
 
 	@ExceptionHandler(DuplicateKeyException.class)
@@ -50,7 +50,7 @@ public class ControllerAdvice {
 	@ExceptionHandler({UnauthorizedException.class, AuthorizationException.class})
 	public Result<?> handleAuthorizationException(AuthorizationException e){
 		log.error(e.getMessage(), e);
-		return Result.failed(ResultCode.FORBIDDEN,ResultCode.FORBIDDEN.getMessage());
+		return Result.failed(ResultCode.FORBIDDEN.getCode(),ResultCode.FORBIDDEN.getMessage());
 	}
 
 	@ExceptionHandler(Exception.class)
