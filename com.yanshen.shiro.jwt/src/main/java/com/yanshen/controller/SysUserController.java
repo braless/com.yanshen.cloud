@@ -9,11 +9,15 @@ import com.yanshen.common.Result;
 import com.yanshen.constants.AuthConstats;
 import com.yanshen.entity.LoginUser;
 import com.yanshen.entity.SysUser;
-import com.yanshen.entity.dto.LoginDTO;
+import com.yanshen.entity.reqValidate.BaseReqValidate;
+import com.yanshen.entity.reqValidate.LoginDTO;
+import com.yanshen.entity.reqValidate.SysUserDTO;
+import com.yanshen.rocketmq.RocketProducer;
 import com.yanshen.service.SysUserService;
 import com.yanshen.util.*;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
@@ -37,6 +41,9 @@ public class SysUserController {
     @Autowired
     private RedisUtil redisUtil;
 
+    @Autowired
+    RocketProducer rocketProducer;
+
 
     @PostMapping("/login")
     public Result login(@RequestBody LoginDTO loginDTO) {
@@ -52,7 +59,7 @@ public class SysUserController {
         return userService.login(loginDTO);
     }
     @GetMapping("/list")
-    public Result list() {
+    public Result list(@Validated  @RequestBody  SysUserDTO dto) {
         return Result.success(userService.list());
     }
 
@@ -122,6 +129,14 @@ public class SysUserController {
     public Result logOut() {
         String currentUserId = ThreadLocalUtils.getCurrentUserId();
         redisUtil.delete(AuthConstats.USER_TOKEN_PREFIX+currentUserId);
+        return Result.success();
+    }
+
+    @RequestMapping("/sendMq")
+    public Result sendMq() {
+        JSONObject jsonObject =new JSONObject();
+        jsonObject.set("ok",true);
+        rocketProducer.asyncSendMsg("",jsonObject.toString());
         return Result.success("傻逼!");
     }
 }

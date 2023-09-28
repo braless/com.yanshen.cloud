@@ -8,6 +8,7 @@ import com.yanshen.constants.AuthConstats;
 import com.yanshen.entity.LoginUser;
 import com.yanshen.entity.SysTenant;
 import com.yanshen.entity.dto.SysTenantDto;
+import com.yanshen.handler.exceptions.TipException;
 import com.yanshen.service.ISysTenantService;
 import com.yanshen.util.BcryptUtil;
 import com.yanshen.util.IdWorker;
@@ -49,6 +50,9 @@ public class SysTenantController {
     @GetMapping(value = "/login")
     public Result tenantLogin(@RequestParam String userName, @RequestParam String password) {
         SysTenant sysTenant = sysTenantService.getOne(new LambdaQueryWrapper<SysTenant>().eq(SysTenant::getUserName, userName));
+        if (!BcryptUtil.match(password,sysTenant.getPassword())){
+            throw new TipException("用户密码不正确~");
+        }
         String userId = sysTenant.getUserName();
         String jwtToken = jwtUtil.createJwtToken(sysTenant.getUserName(), CacheTime.JWT_EXPIRE_SECONDS);
         long expTime = jwtUtil.getExpTime(jwtToken);

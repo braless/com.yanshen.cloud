@@ -3,7 +3,7 @@ package com.yanshen.service;
 import com.yanshen.common.Result;
 import com.yanshen.entity.SysUser;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.yanshen.entity.dto.LoginDTO;
+import com.yanshen.entity.reqValidate.LoginDTO;
 
 /**
  * <p>

@@ -8,7 +8,7 @@ import com.yanshen.common.CacheTime;
 import com.yanshen.common.Result;
 import com.yanshen.entity.LoginUser;
 import com.yanshen.entity.SysUser;
-import com.yanshen.entity.dto.LoginDTO;
+import com.yanshen.entity.reqValidate.LoginDTO;
 import com.yanshen.mapper.UserMapper;
 import com.yanshen.service.SysUserService;
 import com.yanshen.util.BcryptUtil;
