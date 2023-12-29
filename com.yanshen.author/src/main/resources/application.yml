@@ -28,54 +28,54 @@ spring:
         min-idle: '5'
     password: ENC(rcxTWan8/++gmENakO35/ZBKmmzk7+yb)
   datasource:
-    dynamic:
-      primary: datahub #设置默认的数据源或者数据源组,默认值即为datahub
-      datasource:
-        datahub:
-          url: jdbc:mysql://192.168.10.10:3306/test?useAffectedRows=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false&allowMultiQueries=true&allowPublicKeyRetrieval=true&serverTimezone=GMT%2B8
-          username: root
-          password: Toy@10.2021-admin
-          driver-class-name: com.mysql.cj.jdbc.Driver
-        saas:
-          url: jdbc:mysql://192.168.10.10:3306/test?useAffectedRows=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false&allowMultiQueries=true&allowPublicKeyRetrieval=true&serverTimezone=GMT%2B8
-          username: root
-          password: Toy@10.2021-admin
-          driver-class-name: com.mysql.cj.jdbc.Driver
-        slave:
-          url: jdbc:mysql://192.168.10.10:3306/dev_yuecheng?useAffectedRows=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false&allowMultiQueries=true&allowPublicKeyRetrieval=true&serverTimezone=GMT%2B8
-          username: root
-          password: Toy@10.2021-admin
-          driver-class-name: com.mysql.cj.jdbc.Driver
-  data:
-    mongodb:
-      tenantgroup:
-        uri: mongodb://192.168.10.228:27016/test_tenantgroup
-      second:
-        secondSourceList: 2,5,8,11
-        uri: mongodb://192.168.10.228:27016/test_source
-      tenantscoreaccount:
-        uri: mongodb://192.168.10.228:27016/test_tenantscoreaccount
-      third:
-        thirdSourceList: 3,6,9,12
-        uri: mongodb://192.168.10.228:27016/test_source
-      first:
-        firstSourceList: 1,4,7,10
-        uri: mongodb://192.168.10.228:27016/test_source
-      gps:
-        uri: mongodb://192.168.10.228:27016/gps_data
-      inspectrecord:
-        uri: mongodb://192.168.10.228:27016/test_inspectrecord
-      shardCluster:
-        uri: mongodb://192.168.10.228:27016/test
-      primary:
-        uri: mongodb://192.168.10.228:27016/test
+#    dynamic:
+#      primary: datahub #设置默认的数据源或者数据源组,默认值即为datahub
+#      datasource:
+#        datahub:
+#          url: jdbc:mysql://192.168.10.10:3306/test?useAffectedRows=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false&allowMultiQueries=true&allowPublicKeyRetrieval=true&serverTimezone=GMT%2B8
+#          username: root
+#          password: Toy@10.2021-admin
+#          driver-class-name: com.mysql.cj.jdbc.Driver
+#        saas:
+#          url: jdbc:mysql://192.168.10.10:3306/test?useAffectedRows=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false&allowMultiQueries=true&allowPublicKeyRetrieval=true&serverTimezone=GMT%2B8
+#          username: root
+#          password: Toy@10.2021-admin
+#          driver-class-name: com.mysql.cj.jdbc.Driver
+#        slave:
+#          url: jdbc:mysql://192.168.10.10:3306/dev_yuecheng?useAffectedRows=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false&allowMultiQueries=true&allowPublicKeyRetrieval=true&serverTimezone=GMT%2B8
+#          username: root
+#          password: Toy@10.2021-admin
+#          driver-class-name: com.mysql.cj.jdbc.Driver
+#  data:
+#    mongodb:
+#      tenantgroup:
+#        uri: mongodb://192.168.10.228:27016/test_tenantgroup
+#      second:
+#        secondSourceList: 2,5,8,11
+#        uri: mongodb://192.168.10.228:27016/test_source
+#      tenantscoreaccount:
+#        uri: mongodb://192.168.10.228:27016/test_tenantscoreaccount
+#      third:
+#        thirdSourceList: 3,6,9,12
+#        uri: mongodb://192.168.10.228:27016/test_source
+#      first:
+#        firstSourceList: 1,4,7,10
+#        uri: mongodb://192.168.10.228:27016/test_source
+#      gps:
+#        uri: mongodb://192.168.10.228:27016/gps_data
+#      inspectrecord:
+#        uri: mongodb://192.168.10.228:27016/test_inspectrecord
+#      shardCluster:
+#        uri: mongodb://192.168.10.228:27016/test
+#      primary:
+#        uri: mongodb://192.168.10.228:27016/test
   application:
     name: com-lyzh-datahub-openapi
-  cloud:
-    config:
-      uri: http://192.168.10.229:3101
-  zipkin:
-    baseUrl: http://192.168.10.240:9411
+#  cloud:
+#    config:
+#      uri: http://192.168.10.229:3101
+#  zipkin:
+#    baseUrl: http://192.168.10.240:9411
 com:
   alipay:
     sofa:

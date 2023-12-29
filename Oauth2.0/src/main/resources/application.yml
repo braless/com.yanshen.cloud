@@ -1,0 +1,46 @@
+server:
+  port: 3003
+  servlet:
+    context-path: /credit
+spring:
+  application:
+    name: com.yanshen.credit
+  datasource:
+    name: datasource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://61.139.65.135:31063/credit?useUnicode=true&characterEncoding=utf-8&userSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: 6d34761495ec289e
+    # druid datasource
+    type: com.alibaba.druid.pool.DruidDataSource
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+  redis:
+    database: 0
+    host: 192.168.20.99
+    port: 6379
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
+#      portal:
+#      gateway:
+
+# spring:
+#   redis:
+#     host: ${REDIS_SERVER_ADDR:36.133.28.27}
+#     port: ${REDIS_SERVER_PORT:6379}
+#     password: ${REDIS_SERVER_AUTH:admin123456}
+security:
+  ignore:
+
+

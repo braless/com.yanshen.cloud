@@ -17,17 +17,17 @@
 
     <!--通过登录帐号查找用户权限信息-->
     <select id="getUserPower" resultType="java.util.HashMap" parameterType="String">
-        SELECT user.userId ,user.user_name,role.role_name,role.roleId,per.permissionsName ,per.perId,per.perRemarks
-        FROM sys_user AS user,
+        SELECT sysUser.user_id ,sysUser.user_name,role.role_name,role.role_id,per.permissions_name ,per.per_id,per.per_remarks
+        FROM sys_user AS sysUser,
 			 sys_role AS role,
 			 sys_permissions AS per,
 			 role_per,
 			 user_role
-        WHERE user.userName=#{userName}
-          AND user.userId=user_role.userId
-          AND user_role.roleId=role.roleId
-          AND role_per.roleId=role.roleId
-          AND role_per.perId=per.perId
+        WHERE sysUser.user_name=#{userName}
+          AND sysUser.user_id=user_role.user_id
+          AND user_role.role_id=role.role_id
+          AND role_per.role_id=role.role_id
+          AND role_per.per_id=per.per_id
     </select>
 
 </mapper>

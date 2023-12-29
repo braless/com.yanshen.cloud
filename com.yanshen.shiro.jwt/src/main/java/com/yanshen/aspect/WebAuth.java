@@ -67,7 +67,7 @@ public class WebAuth {
                 throw new AuthenticationException("Token失效，请重新登录!");
             }
         } else {
-            throw new AuthenticationException("当前用户未登录！");
+            //throw new AuthenticationException("当前用户未登录！");
         }
         return pjp.proceed();
     }

@@ -6,9 +6,9 @@
 <mapper namespace="com.yanshen.mybatis.dao.StudentMapper">
     <resultMap type="com.yanshen.mybatis.entity.Student" id="StudentResult">
         <id property="studId" column="stud_id"/>
-        <result property="name" column="name"/>
-        <result property="email" column="email"/>
-        <result property="dob" column="dob"/>
+        <r property="name" column="name"/>
+        <r property="email" column="email"/>
+        <r property="dob" column="dob"/>
     </resultMap>
 
     <select id="findStudentById" parameterType="int" resultType="com.yanshen.mybatis.entity.Student">

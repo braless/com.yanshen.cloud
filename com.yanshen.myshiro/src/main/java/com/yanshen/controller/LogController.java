@@ -2,6 +2,7 @@ package com.yanshen.controller;
 
 import com.yanshen.base.Result;
 import org.apache.shiro.authz.annotation.RequiresRoles;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

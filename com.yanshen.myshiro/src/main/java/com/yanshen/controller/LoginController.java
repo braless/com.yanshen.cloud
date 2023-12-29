@@ -45,16 +45,16 @@ public class LoginController {
         if (!passwordEncode.equals(sysUser.getPassword())){
             return Result.failed("账号或密码错误！");
         }
-//        try {
-//            //进行验证，AuthenticationException可以catch到,但是AuthorizationException因为我们使用注解方式,是catch不到的,所以后面使用全局异常捕抓去获取
-//            subject.login(usernamePasswordToken);
-//        } catch (AuthenticationException e) {
-//            e.printStackTrace();
-//            return Result.failed("账号或密码错误！");
-//        } catch (AuthorizationException e) {
-//            e.printStackTrace();
-//            return Result.failed("没有权限！");
-//        }
+        try {
+            //进行验证，AuthenticationException可以catch到,但是AuthorizationException因为我们使用注解方式,是catch不到的,所以后面使用全局异常捕抓去获取
+            subject.login(usernamePasswordToken);
+        } catch (AuthenticationException e) {
+            e.printStackTrace();
+            return Result.failed("账号或密码错误！");
+        } catch (AuthorizationException e) {
+            e.printStackTrace();
+            return Result.failed("没有权限！");
+        }
         String token = JwtUtil.sign(userName);
         Map<String,String> map =new HashMap<>();
         map.put("userName",userName);

@@ -1,9 +1,10 @@
 server:
-  port: 3005
-
+  port: 3006
+  servlet:
+    context-path:
 spring:
   application:
-    name: com.yanshen.plus
+    name: com.yanshen.generator
   redis:
     database: 0
     host: 192.168.0.99
@@ -40,3 +41,6 @@ spring:
     testOnReturn: false
     poolPreparedStatements: true
     maxOpenPreparedStatements: 20
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

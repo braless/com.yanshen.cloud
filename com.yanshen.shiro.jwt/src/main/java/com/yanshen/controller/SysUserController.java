@@ -15,6 +15,7 @@ import com.yanshen.entity.reqValidate.SysUserDTO;
 import com.yanshen.rocketmq.RocketProducer;
 import com.yanshen.service.SysUserService;
 import com.yanshen.util.*;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
@@ -33,6 +34,7 @@ import java.util.concurrent.TimeUnit;
  */
 @RestController
 @RequestMapping("/user")
+@Api("系统用户")
 public class SysUserController {
 
     @Autowired
@@ -46,6 +48,7 @@ public class SysUserController {
 
 
     @PostMapping("/login")
+    @ApiOperation("登录")
     public Result login(@RequestBody LoginDTO loginDTO) {
         String captcha = loginDTO.getCaptcha();
         if (captcha == null) throw new RuntimeException("验证码无效!");

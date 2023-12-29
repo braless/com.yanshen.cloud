@@ -16,7 +16,17 @@
         <option value="$PROJECT_DIR$/com.yanshen.server1/pom.xml" />
         <option value="$PROJECT_DIR$/com.yanshen.generator/pom.xml" />
         <option value="$PROJECT_DIR$/com.yanshen.author/pom.xml" />
+        <option value="$PROJECT_DIR$/shiro_jwt/pom.xml" />
+        <option value="$PROJECT_DIR$/com.yasnhen.shiro/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-oauth2-authenticator-master/pom.xml" />
+        <option value="$PROJECT_DIR$/com.yanshen.mqlistener/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/creditRefact/pom.xml" />
+        <option value="$PROJECT_DIR$/shiro_jwt/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />

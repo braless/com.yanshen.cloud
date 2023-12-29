@@ -5,6 +5,7 @@ import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTDecodeException;
 import com.auth0.jwt.interfaces.DecodedJWT;
+import com.yanshen.exception.TipException;
 
 import java.util.Date;
 
@@ -41,8 +42,8 @@ public class JwtUtil {
         try {
             DecodedJWT jwt = JWT.decode(token);
             return jwt.getClaim("username").asString();
-        } catch (JWTDecodeException e) {
-            return null;
+        } catch (Exception e) {
+            throw new TipException("Token格式不正确!");
         }
     }
 

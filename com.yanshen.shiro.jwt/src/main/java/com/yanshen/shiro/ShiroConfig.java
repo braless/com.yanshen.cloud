@@ -43,6 +43,8 @@ public class ShiroConfig {
         map.put("/tenant/login","anon");
         map.put("/user/register","anon");
         map.put("/login.jsp","anon");
+        map.put("/doc/**","anon");
+
         map.put("/**", "jwt");   // 所有请求通过我们自己的过滤器
         map.put("/sys-tenant/**","anon");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(map);

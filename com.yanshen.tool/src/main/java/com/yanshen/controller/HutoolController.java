@@ -1,14 +1,12 @@
 package com.yanshen.controller;
 
 
-import cn.hutool.core.io.FileUtil;
 import cn.hutool.http.HttpRequest;
 import cn.hutool.http.HttpUtil;
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
-import com.yanshen.base.ApiResult;
+import com.yanshen.base.Result;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang.ObjectUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,10 +19,10 @@ import java.util.Map;
 public class HutoolController {
 
     @RequestMapping("/do")
-    public ApiResult doSomething(){
+    public Result doSomething(){
         doGet();
         doPost_Body();
-        return ApiResult.success();
+        return Result.success();
     }
 
     /**

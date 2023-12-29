@@ -5,10 +5,7 @@ import com.yanshen.entity.SysUser;
 import com.yanshen.exception.TipException;
 import com.yanshen.service.LoginService;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.shiro.authc.AuthenticationException;
-import org.apache.shiro.authc.AuthenticationInfo;
-import org.apache.shiro.authc.AuthenticationToken;
-import org.apache.shiro.authc.SimpleAuthenticationInfo;
+import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
@@ -24,7 +21,7 @@ import java.util.Map;
  * @Description :
  **/
 @Slf4j
-public class UserRealm extends AuthorizingRealm {
+public class ShiroRealm extends AuthorizingRealm {
 
     @Autowired
     private LoginService loginService;
@@ -39,13 +36,13 @@ public class UserRealm extends AuthorizingRealm {
 
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
+        SysUserDTO dto = (SysUserDTO)principalCollection.getPrimaryPrincipal();
         //获取登录用户名
-        String userName = (String) principalCollection.getPrimaryPrincipal();
+        String userName =dto.getUserName();
         //添加角色和权限
         SimpleAuthorizationInfo simpleAuthorizationInfo = new SimpleAuthorizationInfo();
 
         List<Map<String, Object>> powerList = loginService.getUserPower(userName);
-        System.out.println(powerList.toString());
         for (Map<String, Object> powerMap : powerList) {
             //添加角色
             simpleAuthorizationInfo.addRole(String.valueOf(powerMap.get("roleName")));
@@ -56,10 +53,10 @@ public class UserRealm extends AuthorizingRealm {
     }
 
     @Override
-    protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
+    protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken)  {
         //加这一步的目的是在Post请求的时候会先进认证，然后在到请求
         if (authenticationToken.getPrincipal() == null) {
-            return null;
+            throw new AuthenticationException("token为空!");
         }
         //获取用户信息
         String token = authenticationToken.getPrincipal().toString();
@@ -82,7 +79,7 @@ public class UserRealm extends AuthorizingRealm {
         // 解密获得username，用于和数据库进行对比
         String username = JwtUtil.getUsername(token);
         if (username == null) {
-            throw new TipException("token非法无效!");
+            throw new UnknownAccountException("token非法无效!");
         }
 
         // 查询用户信息

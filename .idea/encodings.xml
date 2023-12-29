@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Oauth2.0/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Oauth2.0/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/canal-client/canal-client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/canal-client/canal-client/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/canal-client/canal-example/src/main/java" charset="UTF-8" />
@@ -13,10 +15,16 @@
     <file url="file://$PROJECT_DIR$/canal-client/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/com.yanshen.author/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/com.yanshen.author/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.yanshen.base/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.yanshen.base/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.yanshen.canal/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.yanshen.canal/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/com.yanshen.common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/com.yanshen.common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/com.yanshen.config/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/com.yanshen.config/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.yanshen.credit/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.yanshen.credit/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/com.yanshen.dev/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/com.yanshen.dev/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/com.yanshen.eureka/src/main/java" charset="UTF-8" />
@@ -27,14 +35,22 @@
     <file url="file://$PROJECT_DIR$/com.yanshen.generator/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/com.yanshen.javaBase/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/com.yanshen.javaBase/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.yanshen.mqlistener/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.yanshen.mqlistener/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.yanshen.myshiro/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.yanshen.myshiro/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/com.yanshen.openapi/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/com.yanshen.openapi/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/com.yanshen.orderService/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/com.yanshen.orderService/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.yanshen.refact/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.yanshen.refact/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/com.yanshen.server1/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/com.yanshen.server1/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/com.yanshen.server2/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/com.yanshen.server2/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.yanshen.shiro.jwt/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.yanshen.shiro.jwt/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.yanshen.shiro/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.yanshen.shiro/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/com.yanshen.tieba/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/com.yanshen.tieba/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/com.yanshen.tool/src/main/java" charset="UTF-8" />
@@ -43,6 +59,10 @@
     <file url="file://$PROJECT_DIR$/com.yanshen.weibo/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/com.yanshen.zuul/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/com.yanshen.zuul/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.yasnhen.shiro/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.yasnhen.shiro/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shiro_jwt/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-oauth2-authenticator/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>

@@ -210,7 +210,7 @@ public interface ListenableFuture<T> extends Future<T> {
     public void sendMessage(String topic, Object o) {
 
         ListenableFuture<SendResult<String, Object>> future = kafkaTemplate.send(topic, o);
-        future.addCallback(result -> logger.info("生产者成功发送消息到topic:{} partition:{}的消息", result.getRecordMetadata().topic(), result.getRecordMetadata().partition()),
+        future.addCallback(r -> logger.info("生产者成功发送消息到topic:{} partition:{}的消息", r.getRecordMetadata().topic(), r.getRecordMetadata().partition()),
                 ex -> logger.error("生产者发送消失败，原因：{}", ex.getMessage()));
     }
 ```
@@ -246,7 +246,7 @@ public interface ListenableFuture<T> extends Future<T> {
         ProducerRecord<String, Object> producerRecord = new ProducerRecord<>(topic, null, System.currentTimeMillis(), String.valueOf(o.hashCode()), o);
       
         ListenableFuture<SendResult<String, Object>> future = kafkaTemplate.send(producerRecord);
-        future.addCallback(result -> logger.info("生产者成功发送消息到topic:{} partition:{}的消息", result.getRecordMetadata().topic(), result.getRecordMetadata().partition()),
+        future.addCallback(r -> logger.info("生产者成功发送消息到topic:{} partition:{}的消息", r.getRecordMetadata().topic(), r.getRecordMetadata().partition()),
                 ex -> logger.error("生产者发送消失败，原因：{}", ex.getMessage()));
     }
 ```
@@ -343,7 +343,7 @@ curl -X POST -F 'name=Java' http://localhost:9090/book
 
 控制台打印出的效果如下：
 
-![](https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-11/springboot-kafka-result.jpg)
+![](https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-11/springboot-kafka-r.jpg)
 
 **my-topic 有2个partition（分区） 当你尝试发送多条消息的时候，你会发现消息会被比较均匀地发送到每个 partion 中。**
 

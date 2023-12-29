@@ -15,11 +15,11 @@
         </#if>
 </#list>
     <#list table.commonFields as field><#--生成公共字段 -->
-    <result column="${field.name}" property="${field.propertyName}" jdbcType="${field.type}"/>
+    <r column="${field.name}" property="${field.propertyName}" jdbcType="${field.type}"/>
 </#list>
     <#list table.fields as field>
     <#if !field.keyFlag><#--生成普通字段 -->
-    <result column="${field.name}" property="${field.propertyName}" jdbcType="${field.type}"/>
+    <r column="${field.name}" property="${field.propertyName}" jdbcType="${field.type}"/>
         </#if>
         </#list>
         </resultMap>

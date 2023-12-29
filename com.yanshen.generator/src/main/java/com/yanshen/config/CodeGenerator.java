@@ -28,7 +28,7 @@ public class CodeGenerator {
                             .commentDate("yyyy-MM-dd") // 注释日期
                             .dateType(DateType.ONLY_DATE)   //定义生成的实体类中日期类型 DateType.ONLY_DATE 默认值: DateType.TIME_PACK
                             //.outputDir(System.getProperty("user.dir") + "/src/main/java"); // 指定输出目录
-                            .outputDir("D:\\github\\spring-cloud\\com.yanshen.generator\\src\\main\\java\\com\\yanshen");
+                            .outputDir("D:\\github\\com.yanshen.cloud\\com.yanshen.generator\\src\\main\\java\\com.yanshen");
                 })
 
                 .packageConfig(builder -> {
@@ -40,7 +40,7 @@ public class CodeGenerator {
                             //.other("model")
                             //.moduleName("xxx") // 设置父包模块名 默认值:无
                             //.pathInfo(Collections.singletonMap(OutputFile.xml, System.getProperty("user.dir") + "/src/main/resources/mapper")); // 设置mapperXml生成路径
-                            .pathInfo(Collections.singletonMap(OutputFile.xml,"D:\\github\\spring-cloud\\com.yanshen.generator\\src\\main\\resources\\mapper"));
+                            .pathInfo(Collections.singletonMap(OutputFile.xml,"D:\\github\\com.yanshen.cloud\\com.yanshen.generator\\src\\main\\resources\\mapper"));
                     //默认存放在mapper的xml下
                 })
 

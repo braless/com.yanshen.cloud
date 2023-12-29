@@ -1,0 +1,198 @@
+2023-11-09 15:05:42.471 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder:87 - Ignore the empty nacos configuration and get it based on dataId[com.yanshen.shiro.jwt.yml] & group[DEFAULT_GROUP]
+2023-11-09 15:05:42.533 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder:87 - Ignore the empty nacos configuration and get it based on dataId[com.yanshen.shiro.jwt-dev.yml] & group[DEFAULT_GROUP]
+2023-11-09 15:05:44.528 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner:44 - No MyBatis mapper was found in '[com.yanshen.mapper.*]' package. Please check your configuration.
+2023-11-09 15:05:53.000 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2023-11-09 15:05:53.018 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2023-11-09 15:24:20.359 [Thread-66] WARN  com.alibaba.nacos.common.notify.NotifyCenter:145 - [NotifyCenter] Start destroying Publisher
+2023-11-09 15:24:20.358 [Thread-9] WARN  com.alibaba.nacos.common.http.HttpClientBeanHolder:108 - [HttpClientBeanHolder] Start destroying common HttpClient
+2023-11-09 15:24:20.363 [Thread-66] WARN  com.alibaba.nacos.common.notify.NotifyCenter:162 - [NotifyCenter] Destruction of the end
+2023-11-09 15:24:20.365 [Thread-9] WARN  com.alibaba.nacos.common.http.HttpClientBeanHolder:114 - [HttpClientBeanHolder] Destruction of the end
+2023-11-09 15:24:43.263 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder:87 - Ignore the empty nacos configuration and get it based on dataId[com.yanshen.shiro.jwt.yml] & group[DEFAULT_GROUP]
+2023-11-09 15:24:43.313 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder:87 - Ignore the empty nacos configuration and get it based on dataId[com.yanshen.shiro.jwt-dev.yml] & group[DEFAULT_GROUP]
+2023-11-09 15:24:45.931 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner:44 - No MyBatis mapper was found in '[com.yanshen.mapper.*]' package. Please check your configuration.
+2023-11-09 15:24:54.951 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2023-11-09 15:24:54.979 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2023-11-09 15:27:43.343 [Thread-66] WARN  com.alibaba.nacos.common.notify.NotifyCenter:145 - [NotifyCenter] Start destroying Publisher
+2023-11-09 15:27:43.342 [Thread-9] WARN  com.alibaba.nacos.common.http.HttpClientBeanHolder:108 - [HttpClientBeanHolder] Start destroying common HttpClient
+2023-11-09 15:27:43.348 [Thread-66] WARN  com.alibaba.nacos.common.notify.NotifyCenter:162 - [NotifyCenter] Destruction of the end
+2023-11-09 15:27:43.350 [Thread-9] WARN  com.alibaba.nacos.common.http.HttpClientBeanHolder:114 - [HttpClientBeanHolder] Destruction of the end
+2023-11-09 15:27:51.870 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder:87 - Ignore the empty nacos configuration and get it based on dataId[com.yanshen.shiro.jwt.yml] & group[DEFAULT_GROUP]
+2023-11-09 15:27:51.896 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder:87 - Ignore the empty nacos configuration and get it based on dataId[com.yanshen.shiro.jwt-dev.yml] & group[DEFAULT_GROUP]
+2023-11-09 15:27:53.951 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner:44 - No MyBatis mapper was found in '[com.yanshen.mapper.*]' package. Please check your configuration.
+2023-11-09 15:28:01.432 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2023-11-09 15:28:01.436 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2023-11-09 15:29:46.351 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.1.47_8848-442ea6d7-dfe2-44bd-8d45-35d42370a89b] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder:87 - Ignore the empty nacos configuration and get it based on dataId[com.yanshen.shiro.jwt.yml] & group[DEFAULT_GROUP]
+2023-11-09 15:29:46.368 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.1.47_8848-442ea6d7-dfe2-44bd-8d45-35d42370a89b] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder:87 - Ignore the empty nacos configuration and get it based on dataId[com.yanshen.shiro.jwt-dev.yml] & group[DEFAULT_GROUP]
+2023-11-09 15:29:55.195 [Thread-58] WARN  com.alibaba.nacos.common.notify.NotifyCenter:145 - [NotifyCenter] Start destroying Publisher
+2023-11-09 15:29:55.195 [Thread-7] WARN  com.alibaba.nacos.common.http.HttpClientBeanHolder:108 - [HttpClientBeanHolder] Start destroying common HttpClient
+2023-11-09 15:29:55.196 [Thread-58] WARN  com.alibaba.nacos.common.notify.NotifyCenter:162 - [NotifyCenter] Destruction of the end
+2023-11-09 15:29:55.196 [Thread-7] WARN  com.alibaba.nacos.common.http.HttpClientBeanHolder:114 - [HttpClientBeanHolder] Destruction of the end
+2023-11-09 15:30:02.299 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder:87 - Ignore the empty nacos configuration and get it based on dataId[com.yanshen.shiro.jwt.yml] & group[DEFAULT_GROUP]
+2023-11-09 15:30:02.326 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder:87 - Ignore the empty nacos configuration and get it based on dataId[com.yanshen.shiro.jwt-dev.yml] & group[DEFAULT_GROUP]
+2023-11-09 15:30:04.404 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner:44 - No MyBatis mapper was found in '[com.yanshen.mapper.*]' package. Please check your configuration.
+2023-11-09 15:30:12.107 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2023-11-09 15:30:12.143 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2023-11-09 15:31:34.070 [Thread-7] WARN  com.alibaba.nacos.common.http.HttpClientBeanHolder:108 - [HttpClientBeanHolder] Start destroying common HttpClient
+2023-11-09 15:31:34.069 [Thread-63] WARN  com.alibaba.nacos.common.notify.NotifyCenter:145 - [NotifyCenter] Start destroying Publisher
+2023-11-09 15:31:34.075 [Thread-63] WARN  com.alibaba.nacos.common.notify.NotifyCenter:162 - [NotifyCenter] Destruction of the end
+2023-11-09 15:31:34.076 [Thread-7] WARN  com.alibaba.nacos.common.http.HttpClientBeanHolder:114 - [HttpClientBeanHolder] Destruction of the end
+2023-11-09 15:31:44.710 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder:87 - Ignore the empty nacos configuration and get it based on dataId[com.yanshen.shiro.jwt.yml] & group[DEFAULT_GROUP]
+2023-11-09 15:31:44.729 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder:87 - Ignore the empty nacos configuration and get it based on dataId[com.yanshen.shiro.jwt-dev.yml] & group[DEFAULT_GROUP]
+2023-11-09 15:31:46.392 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner:44 - No MyBatis mapper was found in '[com.yanshen.mapper.*]' package. Please check your configuration.
+2023-11-09 15:31:53.669 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2023-11-09 15:31:53.691 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2023-11-09 15:41:12.778 [Thread-58] WARN  com.alibaba.nacos.common.notify.NotifyCenter:145 - [NotifyCenter] Start destroying Publisher
+2023-11-09 15:41:12.778 [Thread-7] WARN  com.alibaba.nacos.common.http.HttpClientBeanHolder:108 - [HttpClientBeanHolder] Start destroying common HttpClient
+2023-11-09 15:41:12.780 [Thread-58] WARN  com.alibaba.nacos.common.notify.NotifyCenter:162 - [NotifyCenter] Destruction of the end
+2023-11-09 15:41:12.781 [Thread-7] WARN  com.alibaba.nacos.common.http.HttpClientBeanHolder:114 - [HttpClientBeanHolder] Destruction of the end
+2023-11-09 15:41:30.326 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder:87 - Ignore the empty nacos configuration and get it based on dataId[com.yanshen.shiro.jwt.yml] & group[DEFAULT_GROUP]
+2023-11-09 15:41:30.359 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder:87 - Ignore the empty nacos configuration and get it based on dataId[com.yanshen.shiro.jwt-dev.yml] & group[DEFAULT_GROUP]
+2023-11-09 15:41:32.572 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner:44 - No MyBatis mapper was found in '[com.yanshen.mapper.*]' package. Please check your configuration.
+2023-11-09 15:41:41.274 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2023-11-09 15:41:41.296 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2023-11-09 15:44:10.184 [Thread-9] WARN  com.alibaba.nacos.common.http.HttpClientBeanHolder:108 - [HttpClientBeanHolder] Start destroying common HttpClient
+2023-11-09 15:44:10.184 [Thread-64] WARN  com.alibaba.nacos.common.notify.NotifyCenter:145 - [NotifyCenter] Start destroying Publisher
+2023-11-09 15:44:10.186 [Thread-64] WARN  com.alibaba.nacos.common.notify.NotifyCenter:162 - [NotifyCenter] Destruction of the end
+2023-11-09 15:44:10.186 [Thread-9] WARN  com.alibaba.nacos.common.http.HttpClientBeanHolder:114 - [HttpClientBeanHolder] Destruction of the end
+2023-11-09 15:44:10.210 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.1.47_8848-442ea6d7-dfe2-44bd-8d45-35d42370a89b] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder:87 - Ignore the empty nacos configuration and get it based on dataId[com.yanshen.shiro.jwt.yml] & group[DEFAULT_GROUP]
+2023-11-09 15:44:10.221 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.1.47_8848-442ea6d7-dfe2-44bd-8d45-35d42370a89b] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder:87 - Ignore the empty nacos configuration and get it based on dataId[com.yanshen.shiro.jwt-dev.yml] & group[DEFAULT_GROUP]
+2023-11-09 15:44:10.292 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.1.47_8848-442ea6d7-dfe2-44bd-8d45-35d42370a89b] ERROR org.springframework.boot.SpringApplication:837 - Application run failed
+java.lang.IllegalStateException: Shutdown in progress
+	at java.lang.ApplicationShutdownHooks.add(ApplicationShutdownHooks.java:66)
+	at java.lang.Runtime.addShutdownHook(Runtime.java:211)
+	at org.springframework.context.support.AbstractApplicationContext.registerShutdownHook(AbstractApplicationContext.java:953)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:399)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:140)
+	at org.springframework.cloud.context.refresh.ContextRefresher.addConfigFilesToEnvironment(ContextRefresher.java:113)
+	at org.springframework.cloud.context.refresh.ContextRefresher.refreshEnvironment(ContextRefresher.java:93)
+	at org.springframework.cloud.context.refresh.ContextRefresher.refresh(ContextRefresher.java:85)
+	at org.springframework.cloud.endpoint.event.RefreshEventListener.handle(RefreshEventListener.java:72)
+	at org.springframework.cloud.endpoint.event.RefreshEventListener.onApplicationEvent(RefreshEventListener.java:61)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:361)
+	at com.alibaba.cloud.nacos.refresh.NacosContextRefresher$1.innerReceive(NacosContextRefresher.java:133)
+	at com.alibaba.nacos.api.config.listener.AbstractSharedListener.receiveConfigInfo(AbstractSharedListener.java:40)
+	at com.alibaba.nacos.client.config.impl.CacheData$1.run(CacheData.java:210)
+	at com.alibaba.nacos.client.config.impl.CacheData.safeNotifyListener(CacheData.java:241)
+	at com.alibaba.nacos.client.config.impl.CacheData.checkListenerMd5(CacheData.java:181)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:629)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2023-11-09 15:44:10.294 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.1.47_8848-442ea6d7-dfe2-44bd-8d45-35d42370a89b] ERROR com.alibaba.nacos.client.config.impl.CacheData:228 - [fixed-192.168.1.47_8848-442ea6d7-dfe2-44bd-8d45-35d42370a89b] [notify-error] dataId=com.yanshen.shiro.jwt, group=DEFAULT_GROUP, md5=11c943352f3ffa78be06f9cf11087be8, listener=com.alibaba.cloud.nacos.refresh.NacosContextRefresher$1@728ebbb7 tx=null
+2023-11-09 15:44:17.745 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder:87 - Ignore the empty nacos configuration and get it based on dataId[com.yanshen.shiro.jwt.yml] & group[DEFAULT_GROUP]
+2023-11-09 15:44:17.763 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder:87 - Ignore the empty nacos configuration and get it based on dataId[com.yanshen.shiro.jwt-dev.yml] & group[DEFAULT_GROUP]
+2023-11-09 15:44:19.884 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner:44 - No MyBatis mapper was found in '[com.yanshen.mapper.*]' package. Please check your configuration.
+2023-11-09 15:44:26.881 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2023-11-09 15:44:26.886 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2023-11-09 15:45:46.040 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.1.47_8848-442ea6d7-dfe2-44bd-8d45-35d42370a89b] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder:87 - Ignore the empty nacos configuration and get it based on dataId[com.yanshen.shiro.jwt.yml] & group[DEFAULT_GROUP]
+2023-11-09 15:45:46.058 [com.alibaba.nacos.client.Worker.longPolling.fixed-192.168.1.47_8848-442ea6d7-dfe2-44bd-8d45-35d42370a89b] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder:87 - Ignore the empty nacos configuration and get it based on dataId[com.yanshen.shiro.jwt-dev.yml] & group[DEFAULT_GROUP]
+2023-11-09 15:46:00.311 [Thread-58] WARN  com.alibaba.nacos.common.notify.NotifyCenter:145 - [NotifyCenter] Start destroying Publisher
+2023-11-09 15:46:00.311 [Thread-58] WARN  com.alibaba.nacos.common.notify.NotifyCenter:162 - [NotifyCenter] Destruction of the end
+2023-11-09 15:46:00.311 [Thread-7] WARN  com.alibaba.nacos.common.http.HttpClientBeanHolder:108 - [HttpClientBeanHolder] Start destroying common HttpClient
+2023-11-09 15:46:00.315 [Thread-7] WARN  com.alibaba.nacos.common.http.HttpClientBeanHolder:114 - [HttpClientBeanHolder] Destruction of the end
+2023-11-09 15:46:07.640 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder:87 - Ignore the empty nacos configuration and get it based on dataId[com.yanshen.shiro.jwt.yml] & group[DEFAULT_GROUP]
+2023-11-09 15:46:07.663 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder:87 - Ignore the empty nacos configuration and get it based on dataId[com.yanshen.shiro.jwt-dev.yml] & group[DEFAULT_GROUP]
+2023-11-09 15:46:09.776 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner:44 - No MyBatis mapper was found in '[com.yanshen.mapper.*]' package. Please check your configuration.
+2023-11-09 15:46:16.889 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2023-11-09 15:46:16.894 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2023-11-09 15:50:55.365 [http-nio-8081-exec-10] ERROR o.a.c.core.ContainerBase.[Tomcat].[localhost]:175 - Exception Processing ErrorPage[errorCode=0, location=/error]
+org.apache.catalina.connector.ClientAbortException: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:309)
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:272)
+	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:118)
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:277)
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:219)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:82)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:123)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:398)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:257)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:179)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:51)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:93)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:65)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:471)
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:138)
+	at org.apache.tomcat.util.net.NioBlockingSelector.write(NioBlockingSelector.java:101)
+	at org.apache.tomcat.util.net.NioSelectorPool.write(NioSelectorPool.java:152)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1253)
+	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:764)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flushBlocking(SocketWrapperBase.java:717)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flush(SocketWrapperBase.java:707)
+	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.flush(Http11OutputBuffer.java:572)
+	at org.apache.coyote.http11.filters.ChunkedOutputFilter.flush(ChunkedOutputFilter.java:157)
+	at org.apache.coyote.http11.Http11OutputBuffer.flush(Http11OutputBuffer.java:220)
+	at org.apache.coyote.http11.Http11Processor.flush(Http11Processor.java:1195)
+	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:399)
+	at org.apache.coyote.Response.action(Response.java:209)
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:305)
+	... 51 common frames omitted
+2023-11-09 15:52:04.213 [Thread-8] WARN  com.alibaba.nacos.common.http.HttpClientBeanHolder:108 - [HttpClientBeanHolder] Start destroying common HttpClient
+2023-11-09 15:52:04.214 [Thread-58] WARN  com.alibaba.nacos.common.notify.NotifyCenter:145 - [NotifyCenter] Start destroying Publisher
+2023-11-09 15:52:04.215 [Thread-58] WARN  com.alibaba.nacos.common.notify.NotifyCenter:162 - [NotifyCenter] Destruction of the end
+2023-11-09 15:52:04.217 [Thread-8] WARN  com.alibaba.nacos.common.http.HttpClientBeanHolder:114 - [HttpClientBeanHolder] Destruction of the end
+2023-11-09 15:52:15.624 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder:87 - Ignore the empty nacos configuration and get it based on dataId[com.yanshen.shiro.jwt.yml] & group[DEFAULT_GROUP]
+2023-11-09 15:52:15.647 [main] WARN  c.a.cloud.nacos.client.NacosPropertySourceBuilder:87 - Ignore the empty nacos configuration and get it based on dataId[com.yanshen.shiro.jwt-dev.yml] & group[DEFAULT_GROUP]
+2023-11-09 15:52:17.714 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner:44 - No MyBatis mapper was found in '[com.yanshen.mapper.*]' package. Please check your configuration.
+2023-11-09 15:52:24.626 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2023-11-09 15:52:24.631 [main] WARN  com.netflix.config.sources.URLConfigurationSource:121 - No URLs will be polled as dynamic configuration sources.
+2023-11-09 15:53:11.933 [Thread-7] WARN  com.alibaba.nacos.common.http.HttpClientBeanHolder:108 - [HttpClientBeanHolder] Start destroying common HttpClient
+2023-11-09 15:53:11.933 [Thread-57] WARN  com.alibaba.nacos.common.notify.NotifyCenter:145 - [NotifyCenter] Start destroying Publisher
+2023-11-09 15:53:11.940 [Thread-57] WARN  com.alibaba.nacos.common.notify.NotifyCenter:162 - [NotifyCenter] Destruction of the end
+2023-11-09 15:53:11.941 [Thread-7] WARN  com.alibaba.nacos.common.http.HttpClientBeanHolder:114 - [HttpClientBeanHolder] Destruction of the end
+2023-11-09 15:53:21.616 [SpringContextShutdownHook] WARN  com.alibaba.nacos.client.naming:72 - [NamingHttpClientManager] Start destroying NacosRestTemplate
+2023-11-09 15:53:21.617 [SpringContextShutdownHook] WARN  com.alibaba.nacos.client.naming:79 - [NamingHttpClientManager] Destruction of the end
+2023-11-09 15:53:21.618 [SpringContextShutdownHook] WARN  o.s.beans.factory.support.DisposableBeanAdapter:349 - Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException

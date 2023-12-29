@@ -4,7 +4,7 @@ package com.yanshen.controller;
 import cn.hutool.core.util.RandomUtil;
 import cn.hutool.crypto.digest.DigestUtil;
 import cn.hutool.json.JSONObject;
-import com.yanshen.base.ApiResult;
+import com.yanshen.base.Result;
 import com.yanshen.base.ResultCode;
 import com.yanshen.cache.LoginRedisService;
 import com.yanshen.constant.BaseConstant;
@@ -17,7 +17,6 @@ import com.yanshen.jwt.JwtUtil;
 import com.yanshen.util.PasswordUtil;
 import com.yanshen.util.RandImageUtil;
 import com.yanshen.util.RedisUtil;
-import com.yanshen.vo.LoginSysUserRedisVo;
 import com.yanshen.vo.LoginSysUserVo;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.codec.digest.DigestUtils;
@@ -41,14 +40,14 @@ public class LoginController {
     LoginRedisService loginRedisService;
     private static final String BASE_CHECK_CODES = "qwertyuiplkjhgfdsazxcvbnmQWERTYUPLKJHGFDSAZXCVBNM1234567890";
     @RequestMapping("/login")
-    public ApiResult login(@RequestParam("userName") String userName, @RequestParam("passWord") String passWord) {
-        ApiResult result =new ApiResult();
+    public Result login(@RequestParam("userName") String userName, @RequestParam("passWord") String passWord) {
+        Result result =new Result();
         SysUser dbUser = userService.getUserByName(userName);
         //2. 校验用户名或密码是否正确
         String userpassword = PasswordUtil.encrypt(userName, passWord, dbUser.getSalt());
         String syspassword = dbUser.getPassword();
         if (!userpassword.equals(syspassword)){
-            return ApiResult.failed(ResultCode.FAILED,"账号密码错误");
+            return Result.failed(ResultCode.FAILED,"账号密码错误");
         }
         catchUser(dbUser,result);
 
@@ -62,8 +61,8 @@ public class LoginController {
      * @param key
      */
     @GetMapping(value = "/randomImage/{key}")
-    public ApiResult<String> randomImage(HttpServletResponse response, @PathVariable String key){
-        ApiResult result =new ApiResult();
+    public Result<String> randomImage(HttpServletResponse response, @PathVariable String key){
+        Result result =new Result();
         try {
             String code = RandomUtil.randomString(BASE_CHECK_CODES,4);
             String lowerCaseCode = code.toLowerCase();
@@ -85,7 +84,7 @@ public class LoginController {
      * @param result
      * @return
      */
-    private ApiResult<JSONObject> catchUser(SysUser sysUser, ApiResult<JSONObject> result) {
+    private Result<JSONObject> catchUser(SysUser sysUser, Result<JSONObject> result) {
         String syspassword = sysUser.getPassword();
         String username = sysUser.getUsername();
         // 生成token

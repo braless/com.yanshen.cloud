@@ -1,0 +1,16 @@
+server:
+  port: 3002
+spring:
+  application:
+    name: oauth2-authenticator
+  datasource:
+    url: jdbc:mysql://192.168.20.99:3307/oauth2.0?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai&nullCatalogMeansCurrent=true
+    username: root
+    password: zksk666
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+mybatis-plus:
+  # 扫码 *Mapper.xml 路径
+  mapper-locations: classpath:/mapper/**.xml
+

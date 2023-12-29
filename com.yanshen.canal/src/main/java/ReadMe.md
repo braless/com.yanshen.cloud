@@ -44,7 +44,7 @@ java 方式
 |canal.timeout  |消费的时间间隔(s)|1s
 |canal.server     |服务地址,多个地址以,分隔 格式 ${host}:${port}|null
 |canal.destination |canal 的instance 名称,kafka模式为topic 名称|null
-|canal.user-name     |canal 的用户名    |null
+|canal.sysUser-name     |canal 的用户名    |null
 |canal.password |canal 的密码     |null
 |canal.group-id  |kafka groupId 消费者订阅消息时可使用，kafka canal 客户端 |null
 |canal.async |是否是异步消费，异步消费时，消费时异常将导致消息不会回滚，也不保证顺序性 |true
@@ -68,12 +68,12 @@ public class UserHandler implements EntryHandler<User>{
 
    /**
    *  新增操作
-   * @param user
+   * @param sysUser
     */
    @Override
-    public void insert(User user) {
+    public void insert(User sysUser) {
 	   //你的逻辑
-        log.info("新增 {}",user);
+        log.info("新增 {}",sysUser);
     }
     /**
     * 对于更新操作来讲，before 中的属性只包含变更的属性，after 包含所有属性，通过对比可发现那些属性更新了
@@ -87,12 +87,12 @@ public class UserHandler implements EntryHandler<User>{
     }
     /**
     *  删除操作
-    * @param user
+    * @param sysUser
     */
     @Override
-    public void delete(User user) {
+    public void delete(User sysUser) {
        //你的逻辑
-        log.info("删除 {}",user); 
+        log.info("删除 {}",sysUser); 
    }
 }
 ```

@@ -143,7 +143,12 @@
             <version>2.1.0</version>
             <scope>compile</scope>
         </dependency>
-
+        <!--整合swagger-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-boot-starter</artifactId>
+            <version>3.0.0</version>
+        </dependency>
         <!--        &lt;!&ndash;安全模块&ndash;&gt;-->
 <!--        <dependency>-->
 <!--            <groupId>org.springframework.boot</groupId>-->

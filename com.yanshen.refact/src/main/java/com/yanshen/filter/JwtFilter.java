@@ -15,7 +15,7 @@
  */
 
 package com.yanshen.filter;
-import com.yanshen.base.ApiResult;
+import com.yanshen.base.Result;
 import com.yanshen.base.ResultCode;
 import com.yanshen.cache.LoginRedisService;
 import com.yanshen.config.properties.JwtProperties;
@@ -114,8 +114,8 @@ public class JwtFilter extends AuthenticatingFilter {
         // 设置响应码为401或者直接输出消息
         String url = httpServletRequest.getRequestURI();
         log.error("onAccessDenied url：{}", url);
-        ApiResult<Boolean> apiResult = ApiResult.failed(ResultCode.FAILED.UNAUTHORIZED);
-        HttpServletResponseUtil.printJson(httpServletResponse, apiResult);
+        Result<Boolean> result = Result.failed(ResultCode.FAILED.UNAUTHORIZED);
+        HttpServletResponseUtil.printJson(httpServletResponse, result);
         return false;
     }
 

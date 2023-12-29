@@ -69,7 +69,9 @@ public class JwtFilter extends BasicHttpAuthenticationFilter {
                 try {
                     forwardResp.sendRedirect(redirectUrl);
                 } catch (IOException ex) {
-                    throw new RuntimeException(ex);
+                    LOGGER.error("认证失败!");
+                    return  false;
+                    //throw new RuntimeException(ex);
                 }
                 return false;
             }

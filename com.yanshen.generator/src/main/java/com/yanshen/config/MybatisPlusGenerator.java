@@ -26,7 +26,7 @@ public class MybatisPlusGenerator {
     public static  String user ="root";
     public static  String pwd=  "zksk666";  //;/"6d34761495ec289e";
 
-    public static  String db="jdbc:mysql://192.168.2.99:3307/isp-boot?useUnicode=true&characterEncoding=utf-8&userSSL=false&serverTimezone=GMT%2B8";
+    public static  String db="jdbc:mysql://192.168.20.99:3307/isp-boot?useUnicode=true&characterEncoding=utf-8&userSSL=false&serverTimezone=GMT%2B8";
     public static void main(String[] args) {
         String projectPath = System.getProperty("user.dir");
         FastAutoGenerator.create(
@@ -44,7 +44,7 @@ public class MybatisPlusGenerator {
                         .disableOpenDir() // 执行完毕不打开文件夹
                         // 输出位置
                        //.outputDir(projectPath + "/com.yanshen.generator/src/main/java/com.yanshen/")
-                        .outputDir("D:\\github\\spring-cloud\\com.yanshen.generator\\src\\main\\java\\com\\yanshen")
+                        .outputDir("D:\\github\\com.yanshen.cloud\\com.yanshen.generator\\src\\main\\java\\com\\yanshen")
                 )
                 // 包配置
                 //scanner.apply("请输入包名？")
@@ -60,7 +60,7 @@ public class MybatisPlusGenerator {
                             // 设置mapperXml生成路径
                             //直接右键复制项目mapper文件夹的绝对路径
 
-                            .pathInfo(Collections.singletonMap(OutputFile.xml,"D:\\github\\spring-cloud\\com.yanshen.generator\\src\\main\\resources\\mapper"));
+                            .pathInfo(Collections.singletonMap(OutputFile.xml,"D:\\github\\com.yanshen.cloud\\com.yanshen.generator\\src\\main\\resources\\mapper"));
                 })
 
                 // 策略配置
@@ -94,6 +94,7 @@ public class MybatisPlusGenerator {
 
 
     public static TemplateConfig getTemplateConfig () {
+        //创建一个mybatisplusn逆向生成实体类的方法
         TemplateConfig templateConfig = new TemplateConfig.Builder()
 //                .disable(TemplateType.ENTITY)
                 .entity("/templates/entity.java.vm")

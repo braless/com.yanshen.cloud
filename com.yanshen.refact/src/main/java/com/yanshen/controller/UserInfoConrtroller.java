@@ -1,7 +1,7 @@
 package com.yanshen.controller;
 
 
-import com.yanshen.base.ApiResult;
+import com.yanshen.base.Result;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserInfoConrtroller {
 
     @RequestMapping("/info")
-    public ApiResult info(){
-        return ApiResult.success();
+    public Result info(){
+        return Result.success();
     }
 }

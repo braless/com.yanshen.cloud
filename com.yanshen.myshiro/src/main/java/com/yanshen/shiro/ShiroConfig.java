@@ -12,7 +12,7 @@ import javax.servlet.Filter;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
+/** https://www.cnblogs.com/JCcccit/p/16868252.html
  * @Author : JCccc
  * @CreateTime : 2020/4/24
  * @Description :
@@ -29,9 +29,9 @@ public class ShiroConfig {
 
     //将自己的验证方式加入容器
     @Bean
-    public UserRealm myShiroRealm() {
-        UserRealm userRealm = new UserRealm();
-        return userRealm;
+    public ShiroRealm myShiroRealm() {
+        ShiroRealm shiroRealm = new ShiroRealm();
+        return shiroRealm;
     }
 
     //权限管理，配置主要是Realm的管理认证

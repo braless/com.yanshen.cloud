@@ -6,9 +6,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @MapperScan("com.yanshen.mapper")
-public class Main {
+public class RefactAPP {
     public static void main(String[] args) {
         System.out.println("Hello world!");
-        SpringApplication.run(Main.class, args);
+        SpringApplication.run(RefactAPP.class, args);
     }
 }

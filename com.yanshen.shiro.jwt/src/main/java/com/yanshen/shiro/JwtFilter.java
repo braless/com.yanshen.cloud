@@ -75,7 +75,7 @@ public class JwtFilter extends BasicHttpAuthenticationFilter {
         // 游客访问电商平台首页可以不用携带 token
         if (StringUtils.isEmpty(token)) {
             errorMsg="当前用户未登录";
-            return false;
+            return true;
         }
         try {
             // 交给 myRealm
