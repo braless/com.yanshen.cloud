@@ -20,7 +20,7 @@ import java.util.List;
  * @Author wangpeng
  * @Date 2022/3/29 17:25
  */
-public class MybatisPlusGenerator {
+public class Generator {
 
     public  static String  url ="jdbc:mysql://61.139.65.135:31063/weibo?useUnicode=true&characterEncoding=utf-8&userSSL=false&serverTimezone=GMT%2B8";
     public static  String user ="root";

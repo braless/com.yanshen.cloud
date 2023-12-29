@@ -20,16 +20,16 @@ public class Demo {
         Scanner scan = new Scanner(System.in);
         System.out.println("=====================数据库配置=======================");
         System.out.println("请输入 URL");
-        String url ="jdbc:mysql://192.168.2.99:3307/isp-boot?useUnicode=true&characterEncoding=utf-8&userSSL=false&serverTimezone=GMT%2B8";
+        String url ="jdbc:mysql://192.168.20.99:3307/isp-boot?useUnicode=true&characterEncoding=utf-8&userSSL=false&serverTimezone=GMT%2B8";
         System.out.println("请输入 username");
         String username = "root";
         System.out.println("请输入 password");
         String password = "zksk666";
-
+        String destniton = System.getProperty("user.dir") + "/com.yanshen.generator/";
         FastAutoGenerator.create(url, username, password)
                 // 全局配置
                 .globalConfig((scanner, builder) -> builder.author(scanner.apply("=====================全局配置=======================\n请输入作者名称？"))
-                        .outputDir(System.getProperty("user.dir") + "/src/main/java")
+                        .outputDir(destniton + "/src/main/java")
                         .commentDate("yyyy-MM-dd hh:mm:ss")
                         .dateType(DateType.TIME_PACK)
                         .enableSwagger()
@@ -46,7 +46,7 @@ public class Demo {
                         .mapper("mapper")
                         .xml("mapper")
                         .other("utils")
-                        .pathInfo(Collections.singletonMap(OutputFile.xml, System.getProperty("user.dir")+"/src/main/resources/mapper"))
+                        .pathInfo(Collections.singletonMap(OutputFile.xml, destniton+"/src/main/resources/mapper"))
                 )
                 // 策略配置
                 .strategyConfig((scanner, builder) -> {
