@@ -1,6 +1,6 @@
-package com.yanshen.orderservice.listener;
+package com.yanshen.listener;
 
-import com.yanshen.orderservice.util.SmsClientUtil;
+import com.yanshen.util.SmsClientUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.rocketmq.client.consumer.DefaultMQPushConsumer;
 import org.apache.rocketmq.common.message.MessageExt;
@@ -9,8 +9,6 @@ import org.apache.rocketmq.spring.annotation.RocketMQMessageListener;
 import org.apache.rocketmq.spring.core.RocketMQListener;
 import org.apache.rocketmq.spring.core.RocketMQPushConsumerLifecycleListener;
 import org.springframework.stereotype.Component;
-
-import java.util.List;
 
 /**
  * @Auther: cyc

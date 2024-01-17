@@ -1,4 +1,4 @@
-package com.yanshen.orderservice.listener;
+package com.yanshen.listener;
 
 import lombok.Data;
 

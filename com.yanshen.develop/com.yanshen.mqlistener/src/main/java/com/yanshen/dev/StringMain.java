@@ -1,6 +1,6 @@
-package com.yanshen.orderservice.dev;
+package com.yanshen.dev;
 
-import com.yanshen.orderservice.listener.DevDTO;
+import com.yanshen.listener.DevDTO;
 
 /**
  * @Auther: cyc

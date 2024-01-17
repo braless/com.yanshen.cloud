@@ -1,4 +1,4 @@
-package com.yanshen.orderservice.base;
+package com.yanshen.base;
 
 /**
  * 封装API的错误码

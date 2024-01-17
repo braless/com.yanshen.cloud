@@ -1,7 +1,7 @@
-package com.yanshen.orderservice.util;
+package com.yanshen.util;
 
 
-import com.yanshen.orderservice.dev.Actuator;
+import com.yanshen.dev.Actuator;
 
 /**
  * @author yhl

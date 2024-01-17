@@ -2,7 +2,7 @@ server:
   port: 3104
 spring:
   application:
-    name: com.yanshen.order
+    name: com.yanshen.mqlistener
   cloud:
     nacos:
       discovery:

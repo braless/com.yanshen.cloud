@@ -1,6 +1,4 @@
-package com.yanshen.orderservice.dev.excuteOrder;
-
-import com.yanshen.orderservice.dev.excuteOrder.A;
+package com.yanshen.dev.excuteOrder;
 
 /**
  * @Auther: cyc

@@ -1,4 +1,4 @@
-package com.yanshen.orderservice.thread;
+package com.yanshen.thread;
 
 /**
  * @Auther: cyc

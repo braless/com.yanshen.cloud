@@ -1,4 +1,4 @@
-package com.yanshen.orderservice.dev;
+package com.yanshen.dev;
 
 
 import lombok.extern.slf4j.Slf4j;

@@ -1,4 +1,4 @@
-package com.yanshen.orderservice;
+package com.yanshen;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

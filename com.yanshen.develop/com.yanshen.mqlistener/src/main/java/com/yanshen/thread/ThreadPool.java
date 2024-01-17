@@ -1,4 +1,4 @@
-package com.yanshen.orderservice.thread;
+package com.yanshen.thread;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

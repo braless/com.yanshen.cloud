@@ -1,4 +1,4 @@
-package com.yanshen.orderservice.dev;
+package com.yanshen.dev;
 
 /**
  * 快速排序

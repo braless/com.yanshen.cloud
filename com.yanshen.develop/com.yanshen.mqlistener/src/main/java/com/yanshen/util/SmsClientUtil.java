@@ -1,4 +1,4 @@
-package com.yanshen.orderservice.util;
+package com.yanshen.util;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
