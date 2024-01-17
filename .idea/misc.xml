@@ -20,6 +20,8 @@
         <option value="$PROJECT_DIR$/com.yasnhen.shiro/pom.xml" />
         <option value="$PROJECT_DIR$/spring-oauth2-authenticator-master/pom.xml" />
         <option value="$PROJECT_DIR$/com.yanshen.mqlistener/pom.xml" />
+        <option value="$PROJECT_DIR$/zksk-generator/pom.xml" />
+        <option value="$PROJECT_DIR$/com.yanshen.modules/com.yanshen.shiro/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

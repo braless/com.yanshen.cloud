@@ -13,19 +13,12 @@
     <name>com.yanshen.cloud</name>
     <url>http://maven.apache.org</url>
     <modules>
-        <module>com.yanshen.gateway</module>
-        <module>com.yanshen.zuul</module>
-        <module>com.yanshen.openapi</module>
-        <module>com.yanshen.config</module>
-        <module>com.yanshen.eureka</module>
-        <module>com.yanshen.tool</module>
-        <module>com.yanshen.canal</module>
         <module>com.yanshen.base</module>
-        <module>com.yanshen.refact</module>
-        <module>com.yanshen.myshiro</module>
-        <module>com.yanshen.credit</module>
         <module>Oauth2.0</module>
-        <module>com.yanshen.shiro.jwt</module>
+        <module>com.yanshen.modules</module>
+        <module>com.yanshen.netflix</module>
+        <module>com.yanshen.develop</module>
+        <module>com.yanshen.generators</module>
     </modules>
 
     <properties>

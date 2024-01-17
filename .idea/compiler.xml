@@ -8,9 +8,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="com.yanshen.tieba" />
-        <module name="com.yanshen.config" />
         <module name="canal-spring-boot-starter" />
         <module name="com.yanshen.myshiro" />
+        <module name="com.yanshen.config" />
         <module name="com.yanshen.base" />
         <module name="com.yanshen.eureka" />
         <module name="com.yanshen.gateway" />
@@ -18,36 +18,34 @@
         <module name="com.yanshen.server2" />
         <module name="com.yanshen.refact" />
         <module name="com.yanshen.common" />
+        <module name="com.yanshen.generators" />
         <module name="com.yanshen.tool" />
         <module name="com.yanshen.server1" />
         <module name="com.yanshen.zuul" />
         <module name="com.yanshen.mqlistener" />
         <module name="com.yanshen.canal" />
-        <module name="com.yanshen.openapi" />
         <module name="com.yanshen.dev" />
         <module name="com.yanshen.shiro.jwt" />
+        <module name="com.yanshen.openapi" />
         <module name="canal-spring-boot-autoconfigure" />
         <module name="com.yanshen.author" />
         <module name="spring-oauth2-authenticator" />
         <module name="Oauth2.0" />
         <module name="com.yanshen.weibo" />
-        <module name="com.yanshen.generator" />
         <module name="canal-example" />
+        <module name="com.yanshen.shiro" />
         <module name="com.yanshen.javabase" />
         <module name="canal-client" />
-      </profile>
-      <profile name="Annotation profile for com.yanshen.shiro" enabled="true">
-        <sourceOutputDir name="../com.yasnhen.shiro/target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../com.yasnhen.shiro/target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="com.yanshen.shiro" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="canal-client (1)" target="1.8" />
       <module name="canal-client (2)" target="1.8" />
       <module name="com-yanshen-parent" target="1.8" />
+      <module name="com.yanshen.generator" target="1.8" />
       <module name="com.yasnhen.shiro" target="1.8" />
+      <module name="com.zksk.generator" target="1.8" />
+      <module name="generator" target="1.8" />
       <module name="mqlistener" target="1.8" />
       <module name="shiro-study" target="1.8" />
       <module name="shiro_jwt" target="1.8" />
