@@ -12,8 +12,8 @@
         <module>com.yanshen.gateway</module>
         <module>com.yanshen.mqlistener</module>
         <module>com.yanshen.openapi</module>
-        <module>com.yanshen.server1</module>
-        <module>com.yanshen.server2</module>
+        <module>com.yanshen.balance1</module>
+        <module>com.yanshen.balance2</module>
         <module>com.yanshen.weibo</module>
     </modules>
     <artifactId>com.yanshen.develop</artifactId>
