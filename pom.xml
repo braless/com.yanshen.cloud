@@ -14,7 +14,6 @@
     <url>http://maven.apache.org</url>
     <modules>
         <module>com.yanshen.base</module>
-        <module>Oauth2.0</module>
         <module>com.yanshen.modules</module>
         <module>com.yanshen.netflix</module>
         <module>com.yanshen.develop</module>
@@ -60,5 +59,33 @@
             </dependency>
 
         </dependencies>
+
     </dependencyManagement>
+
+    <!-- 开发 -->
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <spring.active>dev</spring.active>
+            </properties>
+            <activation>
+                <!-- 默认激活配置 -->
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <id>uat</id>
+            <properties>
+                <spring.active>uat</spring.active>
+            </properties>
+        </profile>
+        <profile>
+            <id>prod</id>
+            <properties>
+                <spring.active>prod</spring.active>
+            </properties>
+
+        </profile>
+    </profiles>
 </project>
