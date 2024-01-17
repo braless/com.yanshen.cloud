@@ -12,7 +12,6 @@ import com.yanshen.constant.CommonRedisKey;
 import com.yanshen.entity.SysUser;
 import com.yanshen.jwt.JwtToken;
 import com.yanshen.service.SysUserService;
-//import com.yanshen.util.JwtUtil;
 import com.yanshen.jwt.JwtUtil;
 import com.yanshen.util.PasswordUtil;
 import com.yanshen.util.RandImageUtil;
@@ -47,7 +46,7 @@ public class LoginController {
         String userpassword = PasswordUtil.encrypt(userName, passWord, dbUser.getSalt());
         String syspassword = dbUser.getPassword();
         if (!userpassword.equals(syspassword)){
-            return Result.failed(ResultCode.FAILED,"账号密码错误");
+            return Result.failed(String.valueOf(ResultCode.FAILED),"账号密码错误");
         }
         catchUser(dbUser,result);
 

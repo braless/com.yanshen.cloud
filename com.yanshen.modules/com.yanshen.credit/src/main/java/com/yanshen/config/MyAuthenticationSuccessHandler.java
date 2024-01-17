@@ -72,7 +72,7 @@ public class MyAuthenticationSuccessHandler extends SavedRequestAwareAuthenticat
         //判断是json 格式返回 还是 view 格式返回
         //将 authention 信息打包成json格式返回
         response.setContentType("application/json;charset=UTF-8");
-        response.getWriter().write(JSON.toJSONString(ServerResponse.createBySuccess(token)));
+        //response.getWriter().write(JSON.toJSONString(ServerResponse.createBySuccess(token)));
     }
 
 

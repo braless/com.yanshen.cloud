@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.yanshen</groupId>
-        <artifactId>com.yanshen.cloud</artifactId>
+        <artifactId>com.yanshen.develop</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
