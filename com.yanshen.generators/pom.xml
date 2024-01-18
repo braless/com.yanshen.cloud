@@ -10,6 +10,9 @@
     </parent>
 
     <artifactId>com.yanshen.generators</artifactId>
+    <modules>
+        <module>com.yanshen.generator</module>
+    </modules>
     <packaging>pom</packaging>
     <properties>
         <maven.compiler.source>8</maven.compiler.source>

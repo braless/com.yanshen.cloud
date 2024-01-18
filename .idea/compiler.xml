@@ -18,7 +18,6 @@
         <module name="com.yanshen.server2" />
         <module name="com.yanshen.refact" />
         <module name="com.yanshen.common" />
-        <module name="com.yanshen.generators" />
         <module name="com.yanshen.tool" />
         <module name="com.yanshen.server1" />
         <module name="com.yanshen.zuul" />
@@ -31,7 +30,10 @@
         <module name="com.yanshen.author" />
         <module name="spring-oauth2-authenticator" />
         <module name="Oauth2.0" />
+        <module name="com.yanshen.balance1" />
+        <module name="com.yanshen.balance2" />
         <module name="com.yanshen.weibo" />
+        <module name="com.yanshen.generator" />
         <module name="canal-example" />
         <module name="com.yanshen.shiro" />
         <module name="com.yanshen.javabase" />
@@ -42,7 +44,6 @@
       <module name="canal-client (1)" target="1.8" />
       <module name="canal-client (2)" target="1.8" />
       <module name="com-yanshen-parent" target="1.8" />
-      <module name="com.yanshen.generator" target="1.8" />
       <module name="com.yasnhen.shiro" target="1.8" />
       <module name="com.zksk.generator" target="1.8" />
       <module name="generator" target="1.8" />

@@ -9,6 +9,10 @@
     <file url="file://$PROJECT_DIR$/com.yanshen.common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/com.yanshen.credit/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/com.yanshen.credit/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.yanshen.develop/com.yanshen.balance1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.yanshen.develop/com.yanshen.balance1/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.yanshen.develop/com.yanshen.balance2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.yanshen.develop/com.yanshen.balance2/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/com.yanshen.develop/com.yanshen.gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/com.yanshen.develop/com.yanshen.gateway/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/com.yanshen.develop/com.yanshen.mqlistener/src/main/java" charset="UTF-8" />
@@ -25,6 +29,8 @@
     <file url="file://$PROJECT_DIR$/com.yanshen.develop/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/com.yanshen.generator/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/com.yanshen.generator/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.yanshen.generators/com.yanshen.generator/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/com.yanshen.generators/com.yanshen.generator/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/com.yanshen.generators/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/com.yanshen.generators/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/com.yanshen.javaBase/src/main/java" charset="UTF-8" />

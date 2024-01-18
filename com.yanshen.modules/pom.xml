@@ -20,6 +20,7 @@
         <module>com.yanshen.shiro.jwt</module>
         <module>com.yanshen.tool</module>
         <module>com.yanshen.javaBase</module>
+        <module>com.yanshen.shiro</module>
     </modules>
     <packaging>pom</packaging>
     <properties>

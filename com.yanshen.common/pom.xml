@@ -8,7 +8,6 @@
         <artifactId>com.yanshen.cloud</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <groupId>com.yanshen</groupId>
     <artifactId>com.yanshen.common</artifactId>
     <version>1.0-SNAPSHOT</version>
     <build>
