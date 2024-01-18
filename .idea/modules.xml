@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/com.yanshen.common/com.yanshen.common.iml" filepath="$PROJECT_DIR$/com.yanshen.common/com.yanshen.common.iml" />
-      <module fileurl="file://$PROJECT_DIR$/com.yanshen.develop/com.yanshen.mqlistener/com.yanshen.mqlistener.iml" filepath="$PROJECT_DIR$/com.yanshen.develop/com.yanshen.mqlistener/com.yanshen.mqlistener.iml" />
     </modules>
   </component>
 </project>

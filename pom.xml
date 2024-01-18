@@ -14,9 +14,9 @@
         <module>com.yanshen.base</module>
         <module>com.yanshen.modules</module>
         <module>com.yanshen.netflix</module>
-        <module>com.yanshen.develop</module>
         <module>com.yanshen.generators</module>
         <module>com.yanshen.common</module>
+        <module>com.yanshen.develop</module>
     </modules>
 
     <properties>
